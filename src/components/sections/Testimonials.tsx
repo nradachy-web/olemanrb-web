@@ -83,10 +83,10 @@ export default function Testimonials() {
                   strokeWidth={1.75}
                   aria-hidden
                 />
-                <blockquote className="mt-4 flex-1 text-[1.02rem] leading-relaxed text-light">
+                <blockquote className="mt-4 text-[1.02rem] leading-relaxed text-light">
                   {t.quote}
                 </blockquote>
-                <figcaption className="mt-6 border-t border-[var(--hairline)] pt-5">
+                <figcaption className="mt-auto pt-6 border-t border-[var(--hairline)]">
                   <GoldStars className="mb-2.5" />
                   <p className="font-display font-bold uppercase tracking-[-0.005em] text-white">
                     {t.name}

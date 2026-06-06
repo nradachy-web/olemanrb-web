@@ -61,8 +61,8 @@ export default function ContactPage() {
         title="Tell us about your tree. We'll handle the rest."
         titleKeyword="your tree"
         subtitle="Fill out the form or give us a call. We'll get back to you within 24 hours with a free, detailed quote, no cost and no obligation. Got a storm or hazard emergency? Call us right now at (616) 232-5300."
-        image="/photos/owner-truck.jpg"
-        imageAlt="Owner Chris Holmes beside his branded Ole Man RB's truck in Belding, MI"
+        image="/photos/crane-removal.jpg"
+        imageAlt="An Ole Man RB's crane-assisted tree removal in progress in West Michigan."
         crumbs={[{ label: "Contact" }]}
       />
 

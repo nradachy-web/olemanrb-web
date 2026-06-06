@@ -65,13 +65,7 @@ export function CtaBand({
       <div className="container-x">
         <Reveal className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
           <div className="max-w-2xl">
-            <h2
-              className={cn(
-                "font-display uppercase text-balance",
-                "text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[0.98] tracking-[-0.01em]",
-                isRed ? "text-white" : "text-white",
-              )}
-            >
+            <h2 className="h2-display text-balance text-white">
               {heading}
             </h2>
             <Blade
@@ -86,8 +80,8 @@ export function CtaBand({
             />
             <p
               className={cn(
-                "mt-5 max-w-xl text-pretty text-[1.05rem] leading-[1.6]",
-                isRed ? "text-white/85" : "text-silver",
+                "lead mt-5 max-w-xl text-pretty",
+                isRed && "text-white/85",
               )}
             >
               {sub}
@@ -109,19 +103,19 @@ export function CtaBand({
               {cta.primary}
             </Button>
 
-            <a
+            <Button
               href={site.phoneHref}
+              variant="phone"
+              size="lg"
               className={cn(
-                "group inline-flex w-full items-center justify-center gap-2 rounded-sm border px-8 py-4 font-sans text-base font-bold uppercase leading-none tracking-[0.04em] transition-all duration-300 md:w-auto",
-                "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white active:scale-[0.98]",
-                isRed
-                  ? "border-white/40 text-white hover:border-white hover:bg-white/[0.12]"
-                  : "border-[var(--hairline-strong)] text-light hover:border-red hover:text-white hover:bg-red/[0.08]",
+                "w-full justify-center md:w-auto",
+                isRed &&
+                  "border-white/30 bg-transparent text-white/90 hover:border-white/30 hover:bg-white/10 hover:text-white [&_svg.phone-glyph]:text-white/70 [&:hover_svg.phone-glyph]:text-white",
               )}
             >
-              <Phone className="size-[1.05em]" aria-hidden />
+              <Phone className="phone-glyph size-[1.05em]" aria-hidden />
               {site.phone}
-            </a>
+            </Button>
           </div>
         </Reveal>
       </div>

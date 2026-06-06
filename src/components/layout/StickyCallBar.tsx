@@ -25,12 +25,12 @@ export function StickyCallBar() {
           aria-hidden
           className="h-[2px] w-full bg-gradient-to-r from-transparent via-red to-transparent opacity-80"
         />
-        <div className="grid grid-cols-2 gap-2 px-3 py-2.5">
+        <div className="grid grid-cols-2 gap-2.5 px-3 py-3">
           {/* CALL — tel: link */}
           <a
             href={site.phoneHref}
             aria-label={`Call Ole Man RB's at ${site.phone}`}
-            className="group inline-flex items-center justify-center gap-2 rounded-sm border border-[var(--hairline-strong)] px-3 py-3 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-light transition-colors duration-200 hover:border-red hover:text-white active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+            className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm border border-[var(--hairline-strong)] px-3 py-3.5 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-light transition-colors duration-200 hover:border-red hover:text-white active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
           >
             <Phone
               className="phone-glyph size-[1.05em] text-silver transition-colors duration-200 group-hover:text-red"
@@ -43,7 +43,7 @@ export function StickyCallBar() {
           <Link
             href={cta.primaryHref}
             aria-label={cta.primary}
-            className="group inline-flex items-center justify-center gap-2 rounded-sm bg-red px-3 py-3 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-white shadow-[var(--shadow-red)] transition-all duration-200 hover:bg-red-bright active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+            className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm bg-red px-3 py-3.5 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-white shadow-[var(--shadow-red)] transition-all duration-200 hover:bg-red-bright active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
           >
             {cta.quoteShort}
             <ArrowRight

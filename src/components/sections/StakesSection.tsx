@@ -23,10 +23,10 @@ export function StakesSection() {
   return (
     <section className="section bg-ink-2">
       <div className="container-x">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
           {/* image */}
           <Reveal className="order-2 lg:order-1">
-            <div className="relative">
+            <div className="relative mb-8 lg:mb-0">
               {/* restrained hazard accent: a single thin stripe along the top edge */}
               <span
                 aria-hidden
@@ -47,7 +47,7 @@ export function StakesSection() {
                 />
               </div>
               {/* floating caption tag */}
-              <div className="card-frosted absolute -bottom-5 left-5 flex items-center gap-3 px-5 py-4 sm:left-7">
+              <div className="card-frosted absolute -bottom-6 left-4 flex items-center gap-3 px-5 py-4 sm:left-6">
                 <span
                   aria-hidden
                   className="grid size-10 shrink-0 place-items-center rounded-md bg-red text-white shadow-[var(--shadow-red)]"
@@ -70,7 +70,7 @@ export function StakesSection() {
               <Eyebrow tone="red">What happens if you wait</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="mt-5 font-display text-[clamp(1.9rem,3.6vw,3rem)] font-bold uppercase leading-[1.0] tracking-[-0.005em] text-white text-balance">
+              <h2 className="h2-display mt-5 text-white text-balance">
                 A bad tree doesn't get better.{" "}
                 <span className="text-red">It gets more expensive.</span>
               </h2>

@@ -35,8 +35,20 @@ type GalleryProps = {
   ctaLabel?: string;
   /** Alternate background tone for section rhythm. */
   background?: "ink" | "ink-2";
+  /** Render the fixed bento composition instead of masonry (homepage preview). */
+  bento?: boolean;
   className?: string;
 };
+
+/** Bento span pattern for the 6-up homepage preview (TLC-style composition). */
+const BENTO_SPANS = [
+  "sm:col-span-2 sm:row-span-2",
+  "",
+  "",
+  "",
+  "sm:col-span-2",
+  "",
+];
 
 export function Gallery({
   items = galleryData,
@@ -49,6 +61,7 @@ export function Gallery({
   ctaHref = "/contact",
   ctaLabel = "Get a Free Quote on Your Tree",
   background = "ink",
+  bento = false,
   className = "",
 }: GalleryProps) {
   const reduce = useReducedMotion();
@@ -131,8 +144,14 @@ export function Gallery({
           </div>
         )}
 
-        {/* Masonry grid of real job photos */}
-        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4 sm:gap-5 sm:[&>*]:mb-5">
+        {/* Real job photos — fixed bento (homepage preview) or masonry (full gallery) */}
+        <div
+          className={cn(
+            bento
+              ? "grid auto-rows-[180px] grid-cols-2 gap-4 sm:auto-rows-[220px] sm:grid-cols-4 sm:gap-5"
+              : "columns-1 gap-4 sm:columns-2 lg:columns-3 lg:gap-5 [&>*]:mb-4 [&>*]:break-inside-avoid sm:gap-5 sm:[&>*]:mb-5",
+          )}
+        >
           {photos.map((photo, i) => (
             <motion.button
               key={photo.src}
@@ -152,6 +171,8 @@ export function Gallery({
               }}
               className={cn(
                 "group relative block w-full overflow-hidden rounded-lg",
+                bento && "h-full",
+                bento && (BENTO_SPANS[i] ?? ""),
                 "border border-[var(--hairline)] bg-charcoal",
                 "shadow-[var(--shadow-card)] transition-shadow duration-300",
                 "hover:border-[var(--hairline-strong)] hover:shadow-[var(--shadow-lift)]",
@@ -163,7 +184,12 @@ export function Gallery({
                 alt={photo.alt}
                 loading="lazy"
                 decoding="async"
-                className="block h-auto w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] motion-reduce:transform-none motion-reduce:transition-none"
+                width={1800}
+                height={1013}
+                className={cn(
+                  "block w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none",
+                  bento ? "h-full" : "h-auto",
+                )}
               />
               {/* bottom-up ink veil for depth */}
               <span
@@ -244,29 +270,34 @@ export function Gallery({
               </>
             )}
 
-            <motion.figure
-              key={active}
-              initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="flex max-h-full w-full max-w-5xl flex-col items-center gap-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="overflow-hidden rounded-lg border border-[var(--hairline-strong)] shadow-[var(--shadow-lift)]">
-                <img
-                  src={asset(current.src)}
-                  alt={current.alt}
-                  decoding="async"
-                  className="block max-h-[76svh] w-auto max-w-full object-contain"
-                />
-              </div>
-              <figcaption className="max-w-2xl text-pretty text-center text-[0.9rem] leading-relaxed text-silver">
-                {current.alt}
-                <span className="ml-3 text-faint">
-                  {active! + 1} / {count}
-                </span>
-              </figcaption>
-            </motion.figure>
+            <AnimatePresence mode="wait">
+              <motion.figure
+                key={active}
+                initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="flex max-h-full w-full max-w-5xl flex-col items-center gap-4"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="overflow-hidden rounded-lg border border-[var(--hairline-strong)] shadow-[var(--shadow-lift)]">
+                  <img
+                    src={asset(current.src)}
+                    alt={current.alt}
+                    decoding="async"
+                    width={1800}
+                    height={1013}
+                    className="block max-h-[76svh] w-auto max-w-full object-contain"
+                  />
+                </div>
+                <figcaption className="max-w-2xl text-pretty text-center text-[0.9rem] leading-relaxed text-silver">
+                  {current.alt}
+                  <span className="ml-3 text-muted">
+                    {active! + 1} / {count}
+                  </span>
+                </figcaption>
+              </motion.figure>
+            </AnimatePresence>
           </motion.div>
         )}
       </AnimatePresence>

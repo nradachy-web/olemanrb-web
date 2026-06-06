@@ -76,7 +76,7 @@ export function Hero() {
       </div>
 
       {/* ---------- content (bottom-anchored) ---------- */}
-      <div className="mx-auto w-full max-w-7xl px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-40">
+      <div className="mx-auto w-full max-w-[72rem] px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-40">
         <div className="max-w-3xl">
           <Reveal>
             <Eyebrow tone="red">
@@ -84,11 +84,11 @@ export function Hero() {
             </Eyebrow>
           </Reveal>
 
-          <Reveal delay={0.08}>
+          <Reveal delay={0.06}>
             <h1
               className={cn(
                 "font-display mt-6 text-balance text-white",
-                "text-[clamp(2.9rem,7.5vw,6.25rem)] font-bold leading-[0.92] tracking-[-0.01em]",
+                "text-[clamp(2.6rem,1.4rem+6.2vw,7.25rem)] font-bold leading-[0.92] tracking-[-0.01em] [overflow-wrap:anywhere]",
               )}
             >
               {before}
@@ -106,13 +106,13 @@ export function Hero() {
             </h1>
           </Reveal>
 
-          <Reveal delay={0.16}>
-            <p className="mt-7 max-w-2xl text-pretty text-[clamp(1.05rem,1.6vw,1.3rem)] leading-relaxed text-silver">
+          <Reveal delay={0.12}>
+            <p className="lead mt-7 max-w-2xl text-pretty">
               {brand.heroSub}
             </p>
           </Reveal>
 
-          <Reveal delay={0.24}>
+          <Reveal delay={0.18}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button href={cta.primaryHref} variant="primary" size="lg" withArrow>
                 {cta.primary}
@@ -130,7 +130,7 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.32}>
+          <Reveal delay={0.24}>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-silver">
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck className="size-5 text-red" aria-hidden />
@@ -141,7 +141,8 @@ export function Hero() {
                   {[0, 1, 2, 3, 4].map((i) => (
                     <Star
                       key={i}
-                      className="size-4 fill-red text-red"
+                      className="size-4"
+                      style={{ fill: "#F5B40A", color: "#F5B40A" }}
                     />
                   ))}
                 </span>
@@ -156,13 +157,13 @@ export function Hero() {
 
       {/* ---------- credential strip (pinned at base) ---------- */}
       <div className="relative border-t border-[var(--hairline)] bg-[var(--glass-fill-2)] backdrop-blur-md">
-        <dl className="mx-auto grid w-full max-w-7xl grid-cols-2 divide-x divide-[var(--hairline)] px-5 sm:px-8 lg:grid-cols-4">
+        <dl className="mx-auto grid w-full max-w-[72rem] grid-cols-2 gap-px bg-[var(--hairline)] lg:grid-cols-4">
           {credentials.map((c, i) => {
             const Icon = credentialIcons[i] ?? ShieldCheck;
             return (
               <div
                 key={c.label}
-                className="flex items-start gap-3 px-4 py-5 first:pl-0 sm:px-6"
+                className="flex items-start gap-3 bg-[var(--glass-fill-2)] px-4 py-5 sm:px-6"
               >
                 <Icon
                   className="mt-0.5 size-5 shrink-0 text-red"
@@ -172,7 +173,7 @@ export function Hero() {
                   <dt className="font-display text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-white">
                     {c.label}
                   </dt>
-                  <dd className="mt-0.5 text-sm text-muted">{c.detail}</dd>
+                  <dd className="mt-0.5 text-sm text-silver">{c.detail}</dd>
                 </div>
               </div>
             );

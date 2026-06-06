@@ -69,6 +69,8 @@ export function PageHero({
             <img
               src={asset(image!)}
               alt={imageAlt ?? ""}
+              width={2000}
+              height={1125}
               className="h-full w-full object-cover object-center"
               fetchPriority="high"
               decoding="async"
@@ -78,7 +80,7 @@ export function PageHero({
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to top, var(--ink-veil) 0%, rgba(10,10,11,0.66) 45%, rgba(10,10,11,0.4) 100%)",
+                  "linear-gradient(to top, var(--ink-veil) 0%, rgba(10,10,11,0.72) 42%, rgba(10,10,11,0.5) 78%, rgba(10,10,11,0.4) 100%)",
               }}
             />
             <div
@@ -102,7 +104,7 @@ export function PageHero({
             <Reveal>
               <nav
                 aria-label="Breadcrumb"
-                className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-muted"
+                className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-silver"
               >
                 <Link
                   href="/"
@@ -148,8 +150,8 @@ export function PageHero({
           <Reveal delay={0.14}>
             <h1
               className={cn(
-                "font-display mt-4 text-balance text-white",
-                "text-[clamp(2.4rem,5.5vw,4.25rem)] font-bold leading-[0.96] tracking-[-0.005em]",
+                "font-display mt-4 text-balance text-white [overflow-wrap:anywhere]",
+                "text-[clamp(2.2rem,1.2rem+4.4vw,4.75rem)] font-bold leading-[0.96] tracking-[-0.005em]",
               )}
             >
               {keyword ? (
@@ -166,7 +168,7 @@ export function PageHero({
 
           {subtitle && (
             <Reveal delay={0.22}>
-              <p className="mt-5 max-w-xl text-pretty text-[clamp(1.05rem,1.6vw,1.3rem)] leading-relaxed text-silver">
+              <p className="lead measure mt-5 max-w-xl text-pretty">
                 {subtitle}
               </p>
             </Reveal>

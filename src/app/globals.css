@@ -74,13 +74,23 @@
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out-rugged: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* fixed-header height (drives anchor scroll offset + mobile panel top) */
+  --header-h: 72px;
+
   --background: var(--color-ink);
   --foreground: var(--color-light);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-h: 76px;
+  }
 }
 
 /* ---------- base ---------- */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--color-steel) transparent;
@@ -136,7 +146,7 @@ h5 {
 .section {
   position: relative;
   isolation: isolate;
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: clamp(3.75rem, 3rem + 5vw, 7.5rem);
 }
 
 /* ---------- type helpers ---------- */
@@ -149,11 +159,34 @@ h5 {
   font-family: var(--font-display);
   letter-spacing: -0.005em;
 }
+/* unified section-heading H2 — single fluid ramp used by every section.
+   Replaces the drifting per-component clamps so all H2s match + scale
+   smoothly from 360px through large desktops. */
+.h2-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(1.95rem, 1.2rem + 3.6vw, 3.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.008em;
+}
+/* unified card / sub-heading H3 tier */
+.h3-card {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.6rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+/* optimal reading measure for long-form body copy */
+.measure {
+  max-width: 68ch;
+}
 .eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: clamp(0.74rem, 0.7rem + 0.18vw, 0.86rem);
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: clamp(0.16em, 0.12em + 0.3vw, 0.24em);
   text-transform: uppercase;
   color: var(--color-muted);
 }
@@ -161,7 +194,7 @@ h5 {
   color: var(--color-red);
 }
 .lead {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-size: clamp(1.1rem, 1.02rem + 0.55vw, 1.35rem);
   line-height: 1.55;
   color: var(--color-silver);
 }
@@ -189,7 +222,7 @@ h5 {
   box-shadow: var(--shadow-card);
 }
 .card-hover {
-  transition: transform 0.3s var(--ease-out-soft), border-color 0.3s, box-shadow 0.3s;
+  transition: transform 0.45s var(--ease-out-soft), border-color 0.45s, box-shadow 0.45s;
 }
 .card-hover:hover {
   transform: translateY(-4px);
@@ -246,9 +279,21 @@ h5 {
   transform-origin: left;
   box-shadow: 0 0 14px var(--red-glow);
 }
+/* static (non-animated) blade — same skewed, glowing red slash as .blade.
+   Used by the eyebrow tick, active-nav underline, plan connectors, and the
+   gallery hover slash. Previously referenced but never defined. */
+.blade-static {
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-red), var(--color-red-bright));
+  transform: skewX(-22deg);
+  transform-origin: left;
+  box-shadow: 0 0 14px var(--red-glow);
+}
 .animate-blade-wipe {
   animation: blade-wipe 0.6s var(--ease-out-rugged) both;
-  animation-delay: 0.4s;
+  animation-delay: 0.25s;
+  will-change: transform;
 }
 @keyframes blade-wipe {
   from {
@@ -271,7 +316,8 @@ h5 {
   background-size: 200% 100%;
 }
 .hazard-sweep {
-  animation: hazard-sweep 18s linear infinite;
+  animation: hazard-sweep 7s linear infinite;
+  will-change: background-position;
 }
 @keyframes hazard-sweep {
   to {
@@ -334,24 +380,26 @@ h5 {
 
 /* ---------- ken burns ---------- */
 .animate-kenburns {
-  animation: kenburns 18s ease-out forwards;
+  animation: kenburns 24s ease-in-out infinite alternate;
+  will-change: transform;
 }
 @keyframes kenburns {
   from {
-    transform: scale(1.08);
+    transform: scale(1);
   }
   to {
-    transform: scale(1);
+    transform: scale(1.08);
   }
 }
 
 /* ---------- form fields ---------- */
 .field {
   width: 100%;
+  min-height: 48px;
   border-radius: var(--radius-sm);
   background: var(--color-steel);
   border: 1px solid var(--hairline);
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   color: var(--color-light);
   transition: border-color 0.2s, box-shadow 0.2s;
 }

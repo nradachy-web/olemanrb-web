@@ -91,6 +91,7 @@ export default function HomePage() {
         viewAllHref="/gallery"
         ctaHref="#quote"
         background="ink"
+        bento
       />
 
       <CutDivider />
@@ -172,7 +173,7 @@ function QuoteSection() {
             <Reveal delay={0.08}>
               <h2
                 id="quote-heading"
-                className="mt-5 font-display text-[clamp(1.9rem,3.6vw,3rem)] font-bold uppercase leading-[1.0] tracking-[-0.005em] text-white text-balance"
+                className="h2-display mt-5 text-white text-balance"
               >
                 Tell us about your tree.{" "}
                 <span className="text-red">We'll handle the rest.</span>

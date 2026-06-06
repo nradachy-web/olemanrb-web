@@ -19,17 +19,17 @@ export function GuideSection() {
   return (
     <section className="section woodgrain relative overflow-hidden bg-ink">
       <div className="container-x">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
           {/* image */}
-          <Reveal>
-            <div className="relative">
-              <div className="relative aspect-[5/6] overflow-hidden rounded-lg border border-[var(--hairline)] shadow-[var(--shadow-lift)]">
+          <Reveal className="order-1 lg:order-2">
+            <div className="relative mb-8 lg:mb-0">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-[var(--hairline)] shadow-[var(--shadow-lift)]">
                 <img
                   src={asset(owner.image)}
                   alt={owner.imageAlt}
-                  className="size-full object-cover"
-                  width={1000}
-                  height={1200}
+                  className="size-full object-cover object-[50%_35%]"
+                  width={1400}
+                  height={1400}
                   loading="lazy"
                 />
                 <div
@@ -48,7 +48,7 @@ export function GuideSection() {
               </div>
 
               {/* licensed & insured seal badge */}
-              <div className="card-frosted absolute -bottom-5 -right-3 flex items-center gap-3 px-5 py-4 sm:-right-5">
+              <div className="card-frosted absolute -bottom-6 -right-4 flex items-center gap-3 px-5 py-4 sm:-right-6">
                 <span
                   aria-hidden
                   className="grid size-11 shrink-0 place-items-center rounded-md bg-red text-white shadow-[var(--shadow-red)]"
@@ -68,18 +68,18 @@ export function GuideSection() {
           </Reveal>
 
           {/* content */}
-          <div>
+          <div className="order-2 lg:order-1">
             <Reveal>
               <Eyebrow tone="red">Meet your crew</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="mt-5 font-display text-[clamp(1.9rem,3.6vw,3rem)] font-bold uppercase leading-[1.0] tracking-[-0.005em] text-white text-balance">
+              <h2 className="mt-5 h2-display text-white text-balance">
                 We're the crew West Michigan calls when the tree{" "}
                 <span className="text-red">has to go.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="mt-5 text-[1.02rem] leading-relaxed text-silver text-pretty">
+              <p className="mt-5 measure text-[1.02rem] leading-relaxed text-silver text-pretty">
                 Ole Man RB's Tree Service is owner-operated right here in Belding
                 by {owner.name}. We built this company on one simple idea: answer
                 the phone, show up when we say we will, and leave the yard cleaner
@@ -88,7 +88,7 @@ export function GuideSection() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 text-[1.02rem] leading-relaxed text-silver text-pretty">
+              <p className="mt-4 measure text-[1.02rem] leading-relaxed text-silver text-pretty">
                 We're fully licensed and insured, so you're covered before anyone
                 ever climbs a tree. We've got the equipment to handle the big,
                 scary, near-the-house jobs other crews pass on, including

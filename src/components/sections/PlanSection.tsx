@@ -20,7 +20,7 @@ export function PlanSection() {
             <Eyebrow tone="red">Simple as it should be</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="mt-5 font-display text-[clamp(1.9rem,3.6vw,3rem)] font-bold uppercase leading-[1.0] tracking-[-0.005em] text-ink text-balance">
+            <h2 className="h2-display mt-5 text-ink text-balance">
               Three steps to a tree{" "}
               <span className="text-red">handled.</span>
             </h2>
@@ -45,7 +45,7 @@ export function PlanSection() {
                   >
                     {step.step}
                   </span>
-                  <h3 className="mt-6 font-display text-[1.4rem] font-bold uppercase leading-none tracking-[-0.005em] text-ink">
+                  <h3 className="h3-card mt-6 uppercase text-ink">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-[0.97rem] leading-relaxed text-grey-warm/80 text-pretty">
@@ -76,7 +76,7 @@ export function PlanSection() {
               href={site.phoneHref}
               variant="outline"
               size="lg"
-              className="border-grey-200 text-ink hover:border-red hover:bg-red/[0.06] hover:text-red"
+              className="border-grey-200 text-ink hover:border-red hover:bg-red/[0.06] hover:text-red-deep"
             >
               {cta.phoneLabel}
             </Button>

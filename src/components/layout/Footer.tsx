@@ -35,9 +35,9 @@ export function Footer() {
       {/* ---------------------------------------------------------------- */}
       {/* link zones                                                       */}
       {/* ---------------------------------------------------------------- */}
-      <div className="container-x grid gap-12 py-16 md:grid-cols-[1.5fr_1fr_1.1fr_1.3fr] md:gap-10 md:py-20">
+      <div className="container-x grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.1fr_1.3fr] lg:gap-10 lg:py-20">
         {/* Zone 1 — brand + positioning + Google rating */}
-        <div className="max-w-xs">
+        <div className="max-w-xs sm:col-span-2 lg:col-span-1">
           <Logo tone="light" />
           <p className="mt-6 text-pretty text-sm leading-relaxed text-silver">
             Licensed and insured tree pros across {site.regionShort}. Fast,
@@ -134,7 +134,7 @@ export function Footer() {
             variant="primary"
             size="lg"
             withArrow
-            className="mt-3 w-full sm:w-auto md:w-full"
+            className="mt-3 w-full"
           >
             {cta.primary}
           </Button>
@@ -155,7 +155,7 @@ export function Footer() {
             © {year} {site.legalName}
           </p>
 
-          <div className="flex items-center gap-4 text-xs text-muted">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted">
             <span className="inline-flex items-center gap-2">
               <span
                 aria-hidden
@@ -170,7 +170,7 @@ export function Footer() {
               href="https://modernapexstrategies.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-silver"
+              className="text-silver transition-colors hover:text-white"
             >
               Site by Modern Apex Strategies
             </a>

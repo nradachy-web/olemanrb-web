@@ -2,7 +2,14 @@
 
 import { useState, type FormEvent } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Check, Phone, ShieldCheck, Clock } from "lucide-react";
+import {
+  Check,
+  Phone,
+  ShieldCheck,
+  Clock,
+  ChevronDown,
+  Loader2,
+} from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { serviceOptions, site } from "@/lib/site";
@@ -194,6 +201,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
             autoComplete="name"
             className="field"
             placeholder="Your name"
+            aria-describedby={status === "error" ? "form-error" : undefined}
           />
         </div>
         <div>
@@ -208,6 +216,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
             autoComplete="tel"
             className="field"
             placeholder="(616) 555-0123"
+            aria-describedby={status === "error" ? "form-error" : undefined}
           />
         </div>
         <div>
@@ -221,6 +230,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
             autoComplete="email"
             className="field"
             placeholder="you@example.com"
+            aria-describedby={status === "error" ? "form-error" : undefined}
           />
         </div>
         <div>
@@ -257,9 +267,9 @@ export function EstimateForm({ className = "" }: { className?: string }) {
               </option>
             ))}
           </select>
-          <span
+          <ChevronDown
             aria-hidden
-            className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 border-x-[5px] border-t-[6px] border-x-transparent border-t-silver"
+            className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-silver"
           />
         </div>
       </div>
@@ -281,7 +291,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
         <input
           type="checkbox"
           name="emergency"
-          className="mt-0.5 size-5 shrink-0 accent-red"
+          className="mt-0 size-6 shrink-0 accent-red"
         />
         <span className="text-[0.9rem] leading-relaxed text-light">
           This is an <strong className="text-white">emergency</strong>. A tree
@@ -302,6 +312,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
       {status === "error" && (
         <p
           role="alert"
+          id="form-error"
           className="mt-5 rounded-sm border border-red/40 bg-red/[0.08] px-4 py-3 text-[0.9rem] text-red-tint"
         >
           {error}
@@ -313,22 +324,30 @@ export function EstimateForm({ className = "" }: { className?: string }) {
           type="submit"
           variant="primary"
           size="lg"
-          withArrow
+          withArrow={status !== "submitting"}
+          aria-busy={status === "submitting"}
           disabled={status === "submitting"}
           className="w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
         >
-          {status === "submitting" ? "Sending..." : "Get My Free Quote"}
+          {status === "submitting" ? (
+            <>
+              <Loader2 className="size-[1.05em] animate-spin" aria-hidden />
+              Sending...
+            </>
+          ) : (
+            "Get My Free Quote"
+          )}
         </Button>
         <a
           href={site.phoneHref}
-          className="inline-flex items-center justify-center gap-2 text-[0.92rem] font-semibold text-silver transition-colors hover:text-red-bright"
+          className="inline-flex min-h-[44px] items-center justify-center gap-2 self-stretch px-2 py-2 text-[0.92rem] font-semibold text-silver transition-colors hover:text-red-bright sm:self-auto"
         >
           <Phone className="size-4" aria-hidden />
           or call {site.phone}
         </a>
       </div>
 
-      <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.78rem] text-muted">
+      <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8rem] text-silver">
         <span className="inline-flex items-center gap-1.5">
           <ShieldCheck className="size-3.5 text-red" aria-hidden />
           Licensed and insured
@@ -338,7 +357,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
           Free quote within 24 hours
         </span>
       </div>
-      <p className="mt-3 text-[0.78rem] text-muted">
+      <p className="mt-3 text-[0.8rem] text-silver">
         We'll only use your details to contact you about your quote.
       </p>
     </form>

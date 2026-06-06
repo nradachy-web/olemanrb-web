@@ -52,6 +52,16 @@ export function Header() {
     };
   }, [open]);
 
+  // close the mobile panel on Escape
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   const solid = scrolled || open;
 
   const isActive = (href: string) => {
@@ -74,7 +84,7 @@ export function Header() {
         <Logo tone="light" />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {nav.map((item) => {
             const active = isActive(item.href);
             return (
@@ -83,7 +93,7 @@ export function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "link-underline relative px-4 py-2 text-[0.95rem] font-medium transition-colors duration-300",
+                  "link-underline relative px-3 py-2 text-[0.95rem] font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
                   active ? "text-white" : "text-light/85 hover:text-white",
                 )}
               >
@@ -92,7 +102,7 @@ export function Header() {
                   <Blade
                     animate={false}
                     width="w-5"
-                    className="absolute left-4 -bottom-0.5 h-[3px]"
+                    className="absolute left-3 -bottom-0.5 h-[3px]"
                   />
                 )}
               </Link>
@@ -104,12 +114,12 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 text-[0.95rem] font-semibold text-white transition-colors hover:text-red md:inline-flex"
+            className="hidden items-center gap-2 text-[0.95rem] font-semibold text-white transition-colors hover:text-red focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red md:inline-flex"
           >
             <Phone className="size-[1.05rem]" aria-hidden />
             <span>{site.phone}</span>
           </a>
-          <span className="hidden sm:inline-flex">
+          <span className="hidden lg:inline-flex">
             <Button href={cta.primaryHref} variant="primary">
               {cta.primary}
             </Button>
@@ -119,7 +129,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="grid size-11 place-items-center rounded-sm text-white transition-colors hover:bg-white/[0.08] lg:hidden"
+            className="grid size-11 place-items-center rounded-sm text-white transition-colors hover:bg-white/[0.08] active:bg-white/[0.12] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red md:hidden"
           >
             {open ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
@@ -134,14 +144,14 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 top-[72px] z-40 flex flex-col bg-ink lg:hidden"
+            className="fixed inset-0 top-[var(--header-h)] z-40 flex flex-col bg-ink md:hidden"
           >
             <motion.nav
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
               aria-label="Mobile"
-              className="container-x flex flex-1 flex-col gap-1 overflow-y-auto py-6"
+              className="container-x flex flex-1 flex-col gap-1 overflow-y-auto pt-6 pb-[calc(84px+env(safe-area-inset-bottom))]"
             >
               {nav.map((item) => {
                 const active = isActive(item.href);
@@ -151,7 +161,7 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "group flex items-center gap-3 rounded-md px-3 py-4 font-display text-2xl font-bold uppercase tracking-[-0.01em] transition-colors",
+                      "group flex items-center gap-3 rounded-md px-3 py-4 font-display text-2xl font-bold uppercase tracking-[-0.01em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
                       active
                         ? "text-white"
                         : "text-light/90 hover:bg-white/[0.05] hover:text-white",
@@ -165,20 +175,6 @@ export function Header() {
                 );
               })}
             </motion.nav>
-
-            {/* Phone + primary CTA pinned at the bottom */}
-            <div className="container-x flex flex-col gap-3 border-t border-[var(--hairline)] py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
-              <a
-                href={site.phoneHref}
-                className="inline-flex items-center justify-center gap-2 text-lg font-semibold text-white transition-colors hover:text-red"
-              >
-                <Phone className="size-5" aria-hidden />
-                {site.phone}
-              </a>
-              <Button href={cta.primaryHref} variant="primary" size="lg" withArrow className="w-full">
-                {cta.primary}
-              </Button>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

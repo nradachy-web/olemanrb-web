@@ -50,7 +50,7 @@ export function StormResponse({
       {/* near-black veil for legibility + a red wash from the right */}
       <span
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--ink-veil)] via-[rgba(8,8,9,0.86)] to-[rgba(8,8,9,0.6)]"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--ink-veil)] via-[rgba(8,8,9,0.86)] to-[rgba(8,8,9,0.78)]"
       />
       <span
         aria-hidden
@@ -70,7 +70,7 @@ export function StormResponse({
             {stormResponse.eyebrow}
           </Eyebrow>
 
-          <h2 className="mt-5 font-display uppercase text-balance text-[clamp(2rem,4.4vw,3.25rem)] font-bold leading-[0.98] tracking-[-0.01em] text-white">
+          <h2 className="h2-display mt-5 text-balance text-white">
             {heading}
           </h2>
 
@@ -78,11 +78,11 @@ export function StormResponse({
             Tree on your house? We move fast.
           </p>
 
-          <p className="mt-4 max-w-xl text-pretty text-[1.05rem] leading-[1.6] text-silver">
+          <p className="lead measure mt-4 max-w-xl text-pretty">
             {sub}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Button href={site.phoneHref} variant="primary" size="lg">
               <Phone className="size-[1.05em]" aria-hidden />
               {site.phone}
@@ -90,7 +90,7 @@ export function StormResponse({
 
             <Link
               href={detailsHref}
-              className="group inline-flex items-center justify-center gap-2 rounded-sm border border-[var(--hairline-strong)] px-8 py-4 font-sans text-base font-bold uppercase leading-none tracking-[0.04em] text-light transition-all duration-300 hover:border-red hover:bg-red/[0.08] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-red active:scale-[0.98]"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-sm border border-[var(--hairline-strong)] px-8 py-4 font-sans text-base font-bold uppercase leading-none tracking-[0.04em] text-light transition-all duration-300 hover:border-red hover:bg-red/[0.08] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-red active:scale-[0.98] sm:px-6"
             >
               Storm Damage Details
               <ArrowRight
@@ -100,7 +100,7 @@ export function StormResponse({
             </Link>
           </div>
 
-          <p className="mt-6 text-sm font-medium text-muted">
+          <p className="mt-6 text-sm font-medium text-silver">
             {stormResponse.reassurance}
           </p>
         </Reveal>

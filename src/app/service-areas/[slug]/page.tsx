@@ -243,7 +243,7 @@ export default async function ServiceAreaPage({
                         <span className="block truncate font-display font-semibold uppercase tracking-[0.005em] text-white">
                           {s.short}
                         </span>
-                        <span className="block truncate text-sm text-muted">
+                        <span className="hidden truncate text-sm text-muted lg:block">
                           {s.oneLine}
                         </span>
                       </span>
@@ -270,7 +270,7 @@ export default async function ServiceAreaPage({
               title={`Get a free ${area.name} tree quote.`}
               lead={`Tell us what is going on with your tree. We respond within 24 hours with a clear, written price, no pressure and no obligation. Or call ${site.phone} and we will take care of you right away.`}
             />
-            <Reveal delay={0.1}>
+            <Reveal delay={0.1} className="mx-auto w-full max-w-xl lg:max-w-none">
               <EstimateForm />
             </Reveal>
           </div>

@@ -19,8 +19,8 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  md: "px-6 py-3 text-[0.95rem]",
-  lg: "px-8 py-4 text-base",
+  md: "min-h-[44px] px-6 py-3 text-[0.95rem]",
+  lg: "min-h-[52px] px-8 py-4 text-base",
 };
 
 type BaseProps = {
@@ -39,7 +39,7 @@ function classes({
   return cn(
     "group inline-flex items-center justify-center gap-2 rounded-sm font-sans font-bold uppercase tracking-[0.04em] leading-none",
     "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
-    "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-red",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
     "active:scale-[0.98]",
     variants[variant],
     sizes[size],

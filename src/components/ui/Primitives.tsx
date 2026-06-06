@@ -83,8 +83,7 @@ export function SectionHeading({
       )}
       <Tag
         className={cn(
-          "font-display uppercase text-balance",
-          "text-[clamp(1.9rem,3.6vw,3rem)] font-bold leading-[1.0] tracking-[-0.005em]",
+          "h2-display text-balance",
           titleColor,
         )}
       >

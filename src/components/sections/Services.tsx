@@ -46,8 +46,8 @@ export function ServiceCard({
   className?: string;
 }) {
   const Icon = serviceIcons[service.icon];
-  // 3–5 feature bullets per card; the page carries the full list.
-  const bullets = service.features.slice(0, featured ? 5 : 4);
+  // 4 feature bullets per card; the page carries the full list.
+  const bullets = service.features.slice(0, 4);
 
   return (
     <Link
@@ -64,13 +64,15 @@ export function ServiceCard({
         )}
       >
         {/* image top */}
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden">
           <img
             src={asset(service.image)}
             alt={service.imageAlt}
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+            width={1800}
+            height={1013}
+            className="h-full w-full object-cover object-[50%_40%] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
           />
           {/* dark wash so the icon chip + edge read on any photo */}
           <div
@@ -80,7 +82,7 @@ export function ServiceCard({
           {featured && (
             <span
               aria-hidden
-              className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-sm bg-red/90 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)] backdrop-blur-sm"
+              className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-sm bg-red/90 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)] ring-1 ring-black/20 backdrop-blur-sm"
             >
               <span className="inline-block h-[3px] w-3 -skew-x-12 bg-white/90" />
               Specialty
@@ -104,15 +106,14 @@ export function ServiceCard({
         <div className="flex flex-1 flex-col p-6 pt-9 md:p-7 md:pt-10">
           <h3
             className={cn(
-              "font-display font-semibold leading-[1.06] tracking-[0.01em]",
-              "text-[clamp(1.25rem,2vw,1.6rem)]",
+              "h3-card",
               featured ? "text-red-bright" : "text-white",
             )}
           >
             {service.name}
           </h3>
 
-          <p className="mt-2 text-[0.95rem] leading-relaxed text-silver text-pretty">
+          <p className="mt-2 line-clamp-2 min-h-[2.85em] text-[0.95rem] leading-relaxed text-silver text-pretty">
             {service.oneLine}
           </p>
 
@@ -121,7 +122,7 @@ export function ServiceCard({
             {bullets.map((b) => (
               <li
                 key={b}
-                className="flex items-start gap-2.5 text-[0.9rem] leading-snug text-muted"
+                className="flex items-start gap-2.5 text-[0.9rem] leading-snug text-silver"
               >
                 <Check
                   className="mt-0.5 size-4 shrink-0 text-red"
@@ -136,7 +137,7 @@ export function ServiceCard({
           {/* learn more */}
           <span
             className={cn(
-              "mt-7 inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-[0.04em]",
+              "mt-auto pt-7 inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-[0.04em]",
               "transition-colors duration-300",
               featured ? "text-red-bright" : "text-white group-hover:text-red",
             )}
