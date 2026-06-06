@@ -1020,7 +1020,7 @@ export const faqs: Faq[] = [
 export const nav: NavItem[] = [
   { label: "Services", href: "/services" },
   { label: "Service Areas", href: "/service-areas" },
-  { label: "Storm Response", href: "/storm-response" },
+  { label: "Storm Response", href: "/storm-damage" },
   { label: "Reviews", href: "/#reviews" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

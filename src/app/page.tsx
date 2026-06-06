@@ -83,7 +83,7 @@ export default function HomePage() {
       <PlanSection />
 
       {/* 8. STORM RESPONSE — emergency emphasis band (cinematic, hazard edge) */}
-      <StormResponse detailsHref="/storm-response" />
+      <StormResponse detailsHref="/storm-damage" />
 
       {/* 9. GALLERY PREVIEW — real job photos (dark, bg-ink) */}
       <Gallery
