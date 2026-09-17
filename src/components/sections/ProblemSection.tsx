@@ -77,10 +77,10 @@ export function ProblemSection() {
                 </span>
                 <div className="leading-tight">
                   <p className="font-condensed text-[0.95rem] font-semibold text-white">
-                    We answer the phone.
+                    We answer every call.
                   </p>
                   <p className="text-[0.8rem] text-silver">
-                    A real person, every call
+                    Ready to help with your tree work
                   </p>
                 </div>
               </div>

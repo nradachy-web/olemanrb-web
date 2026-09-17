@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { asset } from "@/lib/asset";
-import { site, cta, nav } from "@/lib/site";
+import { heroImage, site, cta, nav } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -16,7 +16,7 @@ export default function NotFound() {
       {/* Cinematic backdrop, heavily veiled so the page reads as a clean 404 */}
       <div className="absolute inset-0 -z-10">
         <img
-          src={asset("/photos/hero-ai.jpg")}
+          src={asset(heroImage.src)}
           alt=""
           aria-hidden="true"
           className="h-full w-full object-cover opacity-25"

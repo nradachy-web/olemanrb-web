@@ -1210,7 +1210,7 @@ export const seoTemplates = {
     description:
       "Licensed, insured tree removal, trimming, and storm cleanup in {City}, {County}. Fast response and a spotless cleanup. Free quote within 24 hours.",
   },
-  ogImage: "/photos/hero-ai.jpg",
+  ogImage: "/photos/hero-crew-social.jpg",
 } as const;
 
 /* -------------------------------------------------------------------------- */
@@ -1218,8 +1218,10 @@ export const seoTemplates = {
 /* -------------------------------------------------------------------------- */
 
 export const heroImage = {
-  src: "/photos/hero-ai.jpg",
-  alt: "A cinematic golden-hour tree removal in West Michigan with an Ole Man RB's crane",
+  src: "/photos/hero-crew.webp",
+  srcSmall: "/photos/hero-crew-1600.webp",
+  srcMobile: "/photos/hero-crew-mobile.webp",
+  alt: "An Ole Man RB's crew member working on a tree from the company's red spider lift",
 } as const;
 
 /* -------------------------------------------------------------------------- */

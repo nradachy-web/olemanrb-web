@@ -4,7 +4,7 @@ import { AreasGrid } from "@/components/sections/Areas";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { SectionHeading } from "@/components/ui/Primitives";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
-import { serviceAreas, seo, site } from "@/lib/site";
+import { heroImage, serviceAreas, seo, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: seo["service-areas"].title,
@@ -27,8 +27,8 @@ export default function ServiceAreasPage() {
         title="Tree service across West Michigan."
         titleKeyword="West Michigan"
         subtitle={`Our shop is in Belding and we cover ${serviceAreas.length} core towns and the country in between with fast, dependable tree work. If you do not see your town, just ask. Chances are we are already nearby.`}
-        image="/photos/hero-ai.jpg"
-        imageAlt="A cinematic golden-hour tree removal in West Michigan with an Ole Man RB's crane"
+        image={heroImage.src}
+        imageAlt={heroImage.alt}
         crumbs={[{ label: "Service Areas" }]}
       />
 

@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StickyCallBar } from "@/components/layout/StickyCallBar";
 import { JsonLd, localBusinessSchema } from "@/lib/schema";
 import { asset } from "@/lib/asset";
-import { site } from "@/lib/site";
+import { heroImage, seoTemplates, site } from "@/lib/site";
 
 /**
  * Root layout — Ole Man RB's Tree Service.
@@ -40,16 +40,13 @@ const sans = Public_Sans({
   display: "swap",
 });
 
-const ogImage = asset("/photos/hero-ai.jpg");
+const ogImage = asset(seoTemplates.ogImage);
 const iconImage = asset("/logo-white.png");
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://olemanrb.com"),
   // SEO titles in site.ts already include the brand, so no template suffix.
-  title: {
-    default:
-      "Tree Removal & Tree Service in West Michigan · Ole Man RB's Tree Service",
-  },
+  title: "Tree Removal & Tree Service in West Michigan · Ole Man RB's Tree Service",
   description: site.description,
   applicationName: site.name,
   authors: [{ name: site.name }],
@@ -79,7 +76,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "A cinematic golden-hour tree removal in West Michigan with an Ole Man RB's crane",
+        alt: heroImage.alt,
       },
     ],
   },

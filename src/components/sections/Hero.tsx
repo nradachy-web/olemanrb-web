@@ -19,10 +19,10 @@ import {
 const credentialIcons = [ShieldCheck, Clock, Star, Sparkles] as const;
 
 /**
- * HOME HERO — full-bleed cinematic dark hero.
+ * HOME HERO: full-bleed cinematic dark hero.
  *
  * - min-h-[92svh], content bottom-anchored (justify-end).
- * - hero-ai.jpg background with .animate-kenburns + dark ink-veil gradient + .grit film.
+ * - Original crew photo with .animate-kenburns + dark ink-veil gradient + .grit film.
  * - eyebrow: the West Michigan towns.
  * - huge font-display UPPERCASE H1 with ONE red key word, with the signature
  *   animated red Blade wiping in beneath it.
@@ -50,13 +50,23 @@ export function Hero() {
     <section className="relative isolate flex min-h-[92svh] flex-col justify-end overflow-hidden bg-ink">
       {/* ---------- background ---------- */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src={asset(heroImage.src)}
-          alt={heroImage.alt}
-          className="animate-kenburns h-full w-full object-cover object-center"
-          fetchPriority="high"
-          decoding="async"
-        />
+        <picture className="block h-full w-full">
+          <source
+            media="(max-width: 639px)"
+            srcSet={asset(heroImage.srcMobile)}
+          />
+          <img
+            src={asset(heroImage.src)}
+            srcSet={`${asset(heroImage.srcSmall)} 1600w, ${asset(heroImage.src)} 2400w`}
+            sizes="100vw"
+            alt={heroImage.alt}
+            width={2400}
+            height={1350}
+            className="animate-kenburns h-full w-full object-cover object-[20%_center]"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         {/* bottom-anchored ink veil so the headline always reads */}
         <div
           aria-hidden
