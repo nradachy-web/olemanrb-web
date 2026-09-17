@@ -113,7 +113,11 @@ h3,
 h4,
 h5 {
   font-family: var(--font-display);
-  color: var(--color-white);
+}
+@layer base {
+  h1, h2, h3, h4, h5 {
+    color: var(--color-white);
+  }
 }
 ::selection {
   background: var(--color-red);
@@ -188,15 +192,22 @@ h5 {
   font-weight: 700;
   letter-spacing: clamp(0.16em, 0.12em + 0.3vw, 0.24em);
   text-transform: uppercase;
-  color: var(--color-muted);
-}
-.eyebrow-red {
-  color: var(--color-red);
 }
 .lead {
   font-size: clamp(1.1rem, 1.02rem + 0.55vw, 1.35rem);
   line-height: 1.55;
-  color: var(--color-silver);
+}
+/* Component color defaults must yield to each section's text utilities. */
+@layer components {
+  .eyebrow {
+    color: var(--color-muted);
+  }
+  .eyebrow-red {
+    color: var(--color-red);
+  }
+  .lead {
+    color: var(--color-silver);
+  }
 }
 .text-balance {
   text-wrap: balance;
@@ -404,7 +415,7 @@ h5 {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .field::placeholder {
-  color: var(--color-muted);
+  color: var(--color-silver);
 }
 .field:focus {
   outline: none;

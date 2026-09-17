@@ -124,7 +124,7 @@ export default function StormDamagePage() {
                 <p className="font-display text-[clamp(1.25rem,2.6vw,1.7rem)] font-bold uppercase leading-[1.05] tracking-[-0.01em] text-white">
                   Active hazard right now?
                 </p>
-                <p className="mt-1 text-pretty text-[0.98rem] leading-snug text-white/85">
+                <p className="mt-1 text-pretty text-[0.98rem] leading-snug text-white">
                   Do not wait, and do not let an uninsured storm-chaser onto your
                   property. Call the crew that shows up.
                 </p>
@@ -168,7 +168,7 @@ export default function StormDamagePage() {
                   <div className="card machined-edge relative h-full overflow-hidden p-6">
                     <span
                       aria-hidden
-                      className="font-display absolute right-5 top-4 text-[2.4rem] font-bold leading-none text-white/[0.06]"
+                      className="font-display absolute right-5 top-4 text-[2.4rem] font-bold leading-none text-muted"
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -262,7 +262,7 @@ export default function StormDamagePage() {
                       key={step.title}
                       className="card relative flex gap-4 p-5"
                     >
-                      <span className="font-display grid size-9 shrink-0 place-items-center rounded-sm bg-red text-[0.95rem] font-bold text-white shadow-[var(--shadow-red)]">
+                      <span className="font-display grid size-9 shrink-0 place-items-center rounded-sm bg-red-blood text-[0.95rem] font-bold text-white shadow-[var(--shadow-red)]">
                         {i + 1}
                       </span>
                       <div>

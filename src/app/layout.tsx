@@ -102,7 +102,7 @@ export default function RootLayout({
       <body className="grit min-h-screen bg-ink text-light pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-red focus:px-4 focus:py-2 focus:font-semibold focus:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-red-blood focus:px-4 focus:py-2 focus:font-semibold focus:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white"
         >
           Skip to content
         </a>

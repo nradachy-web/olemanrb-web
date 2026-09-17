@@ -362,7 +362,7 @@ export default async function ServiceDetailPage({
                 <div className="card card-hover machined-edge relative h-full overflow-hidden p-7">
                   <span
                     aria-hidden
-                    className="font-display block text-[2.6rem] font-bold leading-none text-red/25"
+                    className="font-display block text-[2.6rem] font-bold leading-none text-red"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -421,7 +421,7 @@ export default async function ServiceDetailPage({
           />
           <div className="container-x">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <p className="eyebrow text-white/80">The result</p>
+              <p className="eyebrow text-white">The result</p>
               <p className="font-display mt-6 text-balance text-[clamp(1.6rem,3.4vw,2.6rem)] font-bold uppercase leading-[1.12]">
                 {service.outcome}
               </p>

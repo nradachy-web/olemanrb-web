@@ -82,7 +82,7 @@ export function ServiceCard({
           {featured && (
             <span
               aria-hidden
-              className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-sm bg-red/90 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)] ring-1 ring-black/20 backdrop-blur-sm"
+              className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-sm bg-red-blood px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-white shadow-[var(--shadow-red)] ring-1 ring-black/20 backdrop-blur-sm"
             >
               <span className="inline-block h-[3px] w-3 -skew-x-12 bg-white/90" />
               Specialty

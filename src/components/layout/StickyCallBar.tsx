@@ -43,7 +43,7 @@ export function StickyCallBar() {
           <Link
             href={cta.primaryHref}
             aria-label={cta.primary}
-            className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm bg-red px-3 py-3.5 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-white shadow-[var(--shadow-red)] transition-all duration-200 hover:bg-red-bright active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+            className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm bg-red-blood px-3 py-3.5 font-sans text-[0.9rem] font-bold uppercase tracking-[0.04em] leading-none text-white shadow-[var(--shadow-red)] transition-all duration-200 hover:bg-red-deep active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
           >
             {cta.quoteShort}
             <ArrowRight

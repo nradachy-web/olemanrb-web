@@ -215,9 +215,10 @@ export function Stat({
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduce = useReducedMotion();
   const isNumeric = typeof value === "number";
+  // Match the server on first render; apply reduced motion in the effect below.
   const [display, setDisplay] = useState<string>(
     isNumeric
-      ? `${prefix}${(reduce || !countUp ? (value as number) : 0).toFixed(
+      ? `${prefix}${(!countUp ? (value as number) : 0).toFixed(
           decimals,
         )}${suffix}`
       : "",

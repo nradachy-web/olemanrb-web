@@ -81,7 +81,7 @@ export function CtaBand({
             <p
               className={cn(
                 "lead mt-5 max-w-xl text-pretty",
-                isRed && "text-white/85",
+                isRed && "text-white",
               )}
             >
               {sub}
@@ -110,7 +110,7 @@ export function CtaBand({
               className={cn(
                 "w-full justify-center md:w-auto",
                 isRed &&
-                  "border-white/30 bg-transparent text-white/90 hover:border-white/30 hover:bg-white/10 hover:text-white [&_svg.phone-glyph]:text-white/70 [&:hover_svg.phone-glyph]:text-white",
+                  "border-white/30 bg-transparent text-white hover:border-white/30 hover:bg-black/10 hover:text-white [&_svg.phone-glyph]:text-white/70 [&:hover_svg.phone-glyph]:text-white",
               )}
             >
               <Phone className="phone-glyph size-[1.05em]" aria-hidden />

@@ -17,12 +17,12 @@ export function PlanSection() {
       <div className="container-x">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <Reveal>
-            <Eyebrow tone="red">Simple as it should be</Eyebrow>
+            <Eyebrow tone="red" className="text-red-deep">Simple as it should be</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="h2-display mt-5 text-ink text-balance">
               Three steps to a tree{" "}
-              <span className="text-red">handled.</span>
+              <span className="text-red-deep">handled.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.14}>

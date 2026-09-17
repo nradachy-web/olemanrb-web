@@ -10,7 +10,7 @@ type Size = "md" | "lg";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-red text-white shadow-[var(--shadow-red)] hover:bg-red-bright hover:shadow-[var(--shadow-red-lg)]",
+    "bg-red-blood text-white shadow-[var(--shadow-red)] hover:bg-red-deep hover:shadow-[var(--shadow-red-lg)]",
   outline:
     "border border-[var(--hairline-strong)] text-light hover:border-red hover:text-white hover:bg-red/[0.08]",
   ghost: "text-light hover:text-white hover:bg-white/[0.06]",
