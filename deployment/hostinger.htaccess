@@ -21,18 +21,18 @@ RewriteRule ^crane-assisted-tree-removal/?$ /services/crane-assisted-removal/ [R
 RewriteRule ^lot-clearing/?$ /services/lot-clearing/ [R=301,L]
 
 # Prevent another rewrite pass after serving a file from the release directory.
-RewriteRule ^_apex-site(?:/|$) - [L]
+RewriteRule ^_apex-repair-20260918(?:/|$) - [L]
 
-RewriteRule ^$ _apex-site/index.html [L]
+RewriteRule ^$ _apex-repair-20260918/index.html [L]
 
-RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1/index.html -f
+RewriteCond %{DOCUMENT_ROOT}/_apex-repair-20260918/$1/index.html -f
 RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 
-RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1 -f
-RewriteRule ^(.+)$ _apex-site/$1 [L]
+RewriteCond %{DOCUMENT_ROOT}/_apex-repair-20260918/$1 -f
+RewriteRule ^(.+)$ _apex-repair-20260918/$1 [L]
 
-RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1/index.html -f
-RewriteRule ^(.+?)/?$ _apex-site/$1/index.html [L]
+RewriteCond %{DOCUMENT_ROOT}/_apex-repair-20260918/$1/index.html -f
+RewriteRule ^(.+?)/?$ _apex-repair-20260918/$1/index.html [L]
 </IfModule>
 # END MODERN APEX STATIC SITE
 
