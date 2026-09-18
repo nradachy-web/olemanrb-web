@@ -7,6 +7,7 @@ import { StickyCallBar } from "@/components/layout/StickyCallBar";
 import { JsonLd, localBusinessSchema } from "@/lib/schema";
 import { asset } from "@/lib/asset";
 import { heroImage, seoTemplates, site } from "@/lib/site";
+import { Analytics } from "@/components/Analytics";
 
 /**
  * Root layout — Ole Man RB's Tree Service.
@@ -44,7 +45,7 @@ const ogImage = asset(seoTemplates.ogImage);
 const iconImage = asset("/logo-white.png");
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://olemanrb.com"),
+  metadataBase: new URL(site.url),
   // SEO titles in site.ts already include the brand, so no template suffix.
   title: "Tree Removal & Tree Service in West Michigan · Ole Man RB's Tree Service",
   description: site.description,
@@ -113,6 +114,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <Footer />
         <StickyCallBar />
+        <Analytics />
       </body>
     </html>
   );

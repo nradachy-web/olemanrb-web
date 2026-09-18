@@ -1,10 +1,9 @@
 /**
  * GitHub Pages project-page basePath helper for raw <img> src and other
  * root-relative asset paths (next/link and next/font handle basePath natively).
- * For the apex-domain cutover, set BASE to "" here and in next.config.ts and
- * add public/CNAME.
+ * Hostinger uses the domain root. GitHub Pages supplies its project path.
  */
-export const BASE = "/olemanrb-web";
+export const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function asset(path: string): string {
   if (!path) return path;

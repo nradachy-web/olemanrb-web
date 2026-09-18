@@ -4,6 +4,7 @@ import {
   serviceAreas,
   services,
   site,
+  seoTemplates,
   testimonials,
 } from "@/lib/site";
 
@@ -14,7 +15,6 @@ import {
  * All data is sourced from "@/lib/site" so there is one source of truth.
  *
  * CONFIRM-BEFORE-LAUNCH values (do NOT invent live data):
- *   - site.url          live apex domain (placeholder until confirmed)
  *   - site.geo          Belding, MI city-center approximation, not the verified GBP pin
  *   - site.facebook     empty until the real profile URL is confirmed (sameAs filters empties)
  *   - googleRating      score "5.0" / count 6 = the six verified named reviews in hand
@@ -65,11 +65,11 @@ export function localBusinessSchema() {
     "@id": `${site.url}/#business`,
     name: site.legalName,
     description: site.description,
-    url: site.url, // TODO: confirm live apex domain before launch
+    url: site.url,
     telephone,
     email: site.email,
-    image: `${site.url}/og.jpg`,
-    logo: `${site.url}/icon.png`,
+    image: `${site.url}${seoTemplates.ogImage}`,
+    logo: `${site.url}/logo-white.png`,
     priceRange: "$$",
     address: ADDRESS,
     geo: {

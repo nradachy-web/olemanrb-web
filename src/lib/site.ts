@@ -23,9 +23,7 @@ export const site = {
   name: "Ole Man RB's Tree Service",
   legalName: "Ole Man RB's Tree Service LLC",
   shortName: "Ole Man RB's",
-  /** Placeholder until the apex domain is confirmed; used only to build absolute
-   * URLs in JSON-LD. Do not surface in copy. Confirm before launch. */
-  url: "https://olemanrbs.com",
+  url: "https://olemanrb.com",
   description:
     "Licensed and insured tree removal, trimming, storm damage cleanup, stump grinding, crane-assisted removal, and lot clearing across Belding, Rockford, Greenville, Grand Rapids, and surrounding West Michigan. Industry-leading response times and a spotless cleanup, every time.",
   tagline: "Save the headache. Call the crew that shows up.",

@@ -172,7 +172,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-silver transition-colors hover:text-white"
             >
-              Site by Modern Apex Strategies
+              Website &amp; marketing by Modern Apex Strategies
             </a>
           </div>
         </div>

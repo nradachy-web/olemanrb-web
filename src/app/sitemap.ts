@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { services, serviceAreas } from "@/lib/site";
+import { services, serviceAreas, site } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const BASE = "https://olemanrb.com";
-const LAST_MODIFIED = "2026-06-06";
+const BASE = site.url;
+const LAST_MODIFIED = "2026-09-18";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths: { path: string; priority: number }[] = [
@@ -19,19 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPaths.map((p) => ({
-      url: `${BASE}${p.path}`,
+      url: `${BASE}${p.path}/`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: p.priority,
     })),
     ...services.map((s) => ({
-      url: `${BASE}/services/${s.slug}`,
+      url: `${BASE}/services/${s.slug}/`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
     ...serviceAreas.map((a) => ({
-      url: `${BASE}/service-areas/${a.slug}`,
+      url: `${BASE}/service-areas/${a.slug}/`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.7,
