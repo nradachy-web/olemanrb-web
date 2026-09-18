@@ -14,6 +14,9 @@ export function Analytics() {
           window.gtag = function () { window.dataLayer.push(arguments); };
           window.gtag('js', new Date());
           window.gtag('config', '${measurementId}');
+          window.addEventListener('apex:quote-success', function () {
+            window.gtag('event', 'generate_lead', { form_name: 'free_quote' });
+          });
           var analyticsScript = document.createElement('script');
           analyticsScript.async = true;
           analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=${measurementId}';

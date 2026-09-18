@@ -13,7 +13,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: seo.services.title,
   description: seo.services.description,
-  alternates: { canonical: "/services" },
+  alternates: { canonical: "/services/" },
 };
 
 export default function ServicesPage() {

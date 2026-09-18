@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Thanks, your free quote request is in. A member of the Ole Man RB's crew will reach out shortly to schedule your free tree service quote.",
   robots: { index: false, follow: false },
-  alternates: { canonical: "/thank-you" },
+  alternates: { canonical: "/thank-you/" },
 };
 
 export default function ThankYouPage() {

@@ -9,7 +9,7 @@ import { heroImage, serviceAreas, seo, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: seo["service-areas"].title,
   description: seo["service-areas"].description,
-  alternates: { canonical: "/service-areas" },
+  alternates: { canonical: "/service-areas/" },
 };
 
 export default function ServiceAreasPage() {

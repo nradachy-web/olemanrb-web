@@ -18,7 +18,8 @@ import { CutDivider, Eyebrow, Stat } from "@/components/ui/Primitives";
 import { Reveal } from "@/components/ui/Reveal";
 
 import { JsonLd, faqSchema } from "@/lib/schema";
-import { faqs, seo, site, stats } from "@/lib/site";
+import { faqs, heroImage, seo, seoTemplates, site, stats } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 /* -------------------------------------------------------------------------- */
 /* METADATA (home)                                                            */
@@ -32,10 +33,12 @@ export const metadata: Metadata = {
     title: seo.home.title,
     description: seo.home.description,
     url: "/",
+    images: [{ url: asset(seoTemplates.ogImage), width: 1200, height: 630, alt: heroImage.alt }],
   },
   twitter: {
     title: seo.home.title,
     description: seo.home.description,
+    images: [asset(seoTemplates.ogImage)],
   },
 };
 

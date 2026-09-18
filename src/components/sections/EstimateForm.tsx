@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
   Check,
@@ -14,14 +14,8 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { serviceOptions, site } from "@/lib/site";
 
-/* -------------------------------------------------------------------------- */
-/* Web3Forms access key — set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in env before    */
-/* launch. The placeholder is treated as "not connected" so the form fails     */
-/* gracefully to the phone fallback instead of silently 404ing submissions.    */
-/* -------------------------------------------------------------------------- */
-const WEB3FORMS_PLACEHOLDER = "REPLACE_WITH_WEB3FORMS_ACCESS_KEY";
-const ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? WEB3FORMS_PLACEHOLDER;
+const QUOTE_ENDPOINT =
+  process.env.NEXT_PUBLIC_QUOTE_ENDPOINT ?? "/wp-json/modern-apex/v1/quote";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -32,6 +26,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string>("");
   const reduce = useReducedMotion();
+  const requestId = useRef<string | null>(null);
 
   const callFallback = `Please call us at ${site.phone} and we'll take care of you right away.`;
 
@@ -65,59 +60,47 @@ export function EstimateForm({ className = "" }: { className?: string }) {
       setError("Please enter a valid phone number so we can reach you.");
       return;
     }
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("error");
       setError("Please enter a valid email address.");
       return;
     }
 
-    // Not connected yet: fail gracefully to the phone fallback.
-    if (!ACCESS_KEY || ACCESS_KEY === WEB3FORMS_PLACEHOLDER) {
+    if (location.length < 2) {
       setStatus("error");
-      setError(`Our online form isn't connected yet. ${callFallback}`);
+      setError("Please enter the address where you need tree service.");
       return;
     }
-
-    const detail = [
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      email && `Email: ${email}`,
-      location && `Town or address: ${location}`,
-      `Service needed: ${service || "Not specified"}`,
-      `Emergency: ${emergency ? "YES, tree on a structure, vehicle, or blocking access" : "No"}`,
-      "",
-      "Message:",
-      message || "(none provided)",
-    ]
-      .filter(Boolean)
-      .join("\n");
 
     setStatus("submitting");
     setError("");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      requestId.current ??= crypto.randomUUID();
+      const res = await fetch(QUOTE_ENDPOINT, {
         method: "POST",
+        signal: AbortSignal.timeout(20000),
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: ACCESS_KEY,
-          subject: emergency
-            ? `EMERGENCY tree request: ${name}`
-            : `New free quote request: ${name}`,
-          from_name: `${site.name} Website`,
+          request_id: requestId.current,
           name,
-          email: email || site.email,
+          email,
           phone,
-          replyto: email || undefined,
-          message: detail,
+          location,
+          service,
+          emergency,
+          message,
+          botcheck: "",
         }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success) {
         setStatus("success");
         form.reset();
+        requestId.current = null;
+        window.dispatchEvent(new Event("apex:quote-success"));
         return;
       }
       setStatus("error");
@@ -198,6 +181,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
             id="name"
             name="name"
             required
+            maxLength={120}
             autoComplete="name"
             className="field"
             placeholder="Your name"
@@ -213,6 +197,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
             name="phone"
             type="tel"
             required
+            maxLength={40}
             autoComplete="tel"
             className="field"
             placeholder="(616) 555-0123"
@@ -221,12 +206,14 @@ export function EstimateForm({ className = "" }: { className?: string }) {
         </div>
         <div>
           <label htmlFor="email" className={labelClass}>
-            Email
+            Email <span className="text-red">*</span>
           </label>
           <input
             id="email"
             name="email"
             type="email"
+            required
+            maxLength={254}
             autoComplete="email"
             className="field"
             placeholder="you@example.com"
@@ -235,14 +222,16 @@ export function EstimateForm({ className = "" }: { className?: string }) {
         </div>
         <div>
           <label htmlFor="location" className={labelClass}>
-            Town or address
+            Property address <span className="text-red">*</span>
           </label>
           <input
             id="location"
             name="location"
-            autoComplete="address-level2"
+            required
+            maxLength={500}
+            autoComplete="street-address"
             className="field"
-            placeholder="e.g. Belding, MI"
+            placeholder="Street address and town"
           />
         </div>
       </div>
@@ -282,6 +271,7 @@ export function EstimateForm({ className = "" }: { className?: string }) {
           id="message"
           name="message"
           rows={4}
+          maxLength={5000}
           className="field resize-y"
           placeholder="A big maple is leaning toward the house and I'd like it looked at..."
         />

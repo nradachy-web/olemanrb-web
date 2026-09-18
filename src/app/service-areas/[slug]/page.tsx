@@ -58,7 +58,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `/service-areas/${area.slug}` },
+    alternates: { canonical: `/service-areas/${area.slug}/` },
   };
 }
 

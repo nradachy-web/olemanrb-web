@@ -26,7 +26,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: seo.about.title,
   description: seo.about.description,
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
 };
 
 /** Map the whyUs icon keys to lucide components (no fabricated claims, copy verbatim). */

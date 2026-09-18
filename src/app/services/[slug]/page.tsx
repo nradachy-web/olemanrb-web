@@ -71,7 +71,7 @@ export async function generateMetadata({
   return {
     title: entry?.title ?? `${service.name} in ${site.regionShort}`,
     description: entry?.description ?? `${service.promise} ${service.intro}`,
-    alternates: { canonical: `/services/${service.slug}` },
+    alternates: { canonical: `/services/${service.slug}/` },
   };
 }
 

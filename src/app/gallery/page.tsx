@@ -17,7 +17,7 @@ import { seo } from "@/lib/site";
 export const metadata: Metadata = {
   title: seo.gallery.title,
   description: seo.gallery.description,
-  alternates: { canonical: "/gallery" },
+  alternates: { canonical: "/gallery/" },
   openGraph: {
     title: seo.gallery.title,
     description: seo.gallery.description,

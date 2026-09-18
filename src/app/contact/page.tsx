@@ -10,7 +10,7 @@ import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: seo.contact.title,
   description: seo.contact.description,
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 
 const details = [

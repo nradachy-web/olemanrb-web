@@ -43,7 +43,7 @@ const stormService = services.find((s) => s.slug === "storm-damage-cleanup")!;
 export const metadata: Metadata = {
   title: seo["storm-response"].title,
   description: seo["storm-response"].description,
-  alternates: { canonical: "/storm-damage" },
+  alternates: { canonical: "/storm-damage/" },
   openGraph: {
     title: seo["storm-response"].title,
     description: seo["storm-response"].description,

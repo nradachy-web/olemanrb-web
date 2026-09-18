@@ -1,0 +1,36 @@
+# BEGIN MODERN APEX STATIC SITE
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.olemanrb\.com$ [NC]
+RewriteRule ^ https://olemanrb.com%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^about-us/?$ /about/ [R=301,L]
+RewriteRule ^service-area/?$ /service-areas/ [R=301,L]
+RewriteRule ^category/services/?$ /services/ [R=301,L]
+RewriteRule ^full-service-tree-removal/?$ /services/tree-removal/ [R=301,L]
+RewriteRule ^tree-trimming/?$ /services/tree-trimming/ [R=301,L]
+RewriteRule ^storm-damage-cleanup/?$ /services/storm-damage-cleanup/ [R=301,L]
+RewriteRule ^stump-grinding/?$ /services/stump-grinding/ [R=301,L]
+RewriteRule ^crane-assisted-tree-removal/?$ /services/crane-assisted-removal/ [R=301,L]
+RewriteRule ^lot-clearing/?$ /services/lot-clearing/ [R=301,L]
+
+# Prevent another rewrite pass after serving a file from the release directory.
+RewriteRule ^_apex-site(?:/|$) - [L]
+
+RewriteRule ^$ _apex-site/index.html [L]
+
+RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1/index.html -f
+RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1 -f
+RewriteRule ^(.+)$ _apex-site/$1 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/_apex-site/$1/index.html -f
+RewriteRule ^(.+?)/?$ _apex-site/$1/index.html [L]
+</IfModule>
+# END MODERN APEX STATIC SITE
+
+# Keep the existing Hostinger and WordPress rules below this block.
+# Unmatched article, legal, administration and API routes continue to WordPress.

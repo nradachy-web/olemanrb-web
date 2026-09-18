@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/thank-you",
+      disallow: ["/thank-you/", "/_apex-site/", "/wp-admin/"],
     },
     sitemap: `${BASE}/sitemap.xml`,
     host: BASE,
