@@ -31,8 +31,9 @@ export const site = {
   regionShort: "West Michigan",
   phone: "(616) 232-5300",
   phoneHref: "tel:+16162325300",
-  email: "olemanrb@gmail.com",
-  emailHref: "mailto:olemanrb@gmail.com",
+  email: "chris@olemanrb.com",
+  emailHref: "mailto:chris@olemanrb.com",
+  blogUrl: "https://olemanrb.com/category/blog/",
   address: {
     street: "1002 N Bridge St",
     city: "Belding",
@@ -1021,6 +1022,7 @@ export const nav: NavItem[] = [
   { label: "Storm Response", href: "/storm-damage" },
   { label: "Reviews", href: "/#reviews" },
   { label: "About", href: "/about" },
+  { label: "Blog", href: site.blogUrl },
   { label: "Contact", href: "/contact" },
 ];
 

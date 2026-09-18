@@ -2,6 +2,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Keep WordPress editor previews available.
+RewriteCond %{QUERY_STRING} (^|&)(elementor-preview|preview|preview_id|preview_nonce|customize_changeset_uuid|customize_messenger_channel)= [NC]
+RewriteRule ^ index.php [END]
+
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.olemanrb\.com$ [NC]
 RewriteRule ^ https://olemanrb.com%{REQUEST_URI} [R=301,L]

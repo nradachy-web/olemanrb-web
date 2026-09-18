@@ -84,7 +84,7 @@ export function Header() {
         <Logo tone="light" />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
           {nav.map((item) => {
             const active = isActive(item.href);
             return (
@@ -114,12 +114,12 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 text-[0.95rem] font-semibold text-white transition-colors hover:text-red focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red md:inline-flex"
+            className="hidden items-center gap-2 text-[0.95rem] font-semibold text-white transition-colors hover:text-red focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red 2xl:inline-flex"
           >
             <Phone className="size-[1.05rem]" aria-hidden />
             <span>{site.phone}</span>
           </a>
-          <span className="hidden lg:inline-flex">
+          <span className="hidden xl:inline-flex">
             <Button href={cta.primaryHref} variant="primary">
               {cta.primary}
             </Button>
@@ -129,7 +129,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="grid size-11 place-items-center rounded-sm text-white transition-colors hover:bg-white/[0.08] active:bg-white/[0.12] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red md:hidden"
+            className="grid size-11 place-items-center rounded-sm text-white transition-colors hover:bg-white/[0.08] active:bg-white/[0.12] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red xl:hidden"
           >
             {open ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
@@ -144,7 +144,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 top-[var(--header-h)] z-40 flex flex-col bg-ink md:hidden"
+            className="fixed inset-0 top-[var(--header-h)] z-40 flex flex-col bg-ink xl:hidden"
           >
             <motion.nav
               initial={{ opacity: 0, y: -8 }}

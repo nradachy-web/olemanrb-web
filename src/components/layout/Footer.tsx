@@ -65,6 +65,12 @@ export function Footer() {
               ({googleRating.count} Google reviews)
             </span>
           </div>
+          <a
+            href={site.blogUrl}
+            className="link-underline mt-6 inline-block text-sm text-silver transition-colors hover:text-white"
+          >
+            Tree care blog
+          </a>
         </div>
 
         {/* Zone 2 — services (all 6, linked) */}
