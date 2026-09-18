@@ -15,7 +15,7 @@ export function Analytics() {
           window.gtag('js', new Date());
           window.gtag('config', '${measurementId}');
           window.addEventListener('apex:quote-success', function () {
-            window.gtag('event', 'generate_lead', { form_name: 'free_quote' });
+            window.gtag('event', 'quote_request_success', { form_name: 'free_quote' });
           });
           var analyticsScript = document.createElement('script');
           analyticsScript.async = true;

@@ -17,7 +17,7 @@ Install `modern-apex-quote.php` in `wp-content/mu-plugins/`. It reads the existi
 
 Before deploying, create a Hostinger backup and save the current `.htaccess` outside the public directory. Upload the completed export to `_apex-site/`, then prepend the managed block in `hostinger.htaccess` to the existing server rules. On later deployments, replace that managed block rather than adding it twice. Purge LiteSpeed caches after switching.
 
-Verify HTTPS, the full static route list, legacy redirects, blog and legal URLs, all sitemap children, phone links, and mobile layouts. For forms, prove a real stored submission and successful webhook action. Reusing a successful request UUID must not create another record or webhook delivery. A `generate_lead` event is queued only after API success; GA4 dashboard ingestion is a separate check.
+Verify HTTPS, the full static route list, legacy redirects, blog and legal URLs, all sitemap children, phone links, and mobile layouts. For forms, prove a real stored submission and successful webhook action. Reusing a successful request UUID must not create another record or webhook delivery. A `quote_request_success` event is queued only after API success; GA4 dashboard ingestion is a separate check. The existing GA4 configuration also emits `generate_lead` on a contact-page visit, so that event alone does not prove a submitted form. Google Ads conversion settings were not changed by this launch.
 
 GitHub Pages uses `/olemanrb-web` and the absolute production quote endpoint through workflow environment variables. Its analytics are disabled. Production uses the domain root and same-origin quote endpoint.
 
