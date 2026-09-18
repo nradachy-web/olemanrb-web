@@ -144,7 +144,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 top-[var(--header-h)] z-40 flex flex-col bg-ink xl:hidden"
+            className="fixed inset-x-0 top-[var(--header-h)] z-40 flex h-[calc(100dvh-var(--header-h))] flex-col bg-ink xl:hidden"
           >
             <motion.nav
               initial={{ opacity: 0, y: -8 }}
@@ -159,6 +159,7 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "group flex items-center gap-3 rounded-md px-3 py-4 font-display text-2xl font-bold uppercase tracking-[-0.01em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
