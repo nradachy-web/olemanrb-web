@@ -13,6 +13,49 @@ import {
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { serviceOptions, site } from "@/lib/site";
+import { QUOTE_SUCCESS_EVENT, type QuoteSuccessDetail } from "@/lib/measurement";
+
+// Modern Apex attribution rails (public/apex-attribution.js, loaded by
+// Analytics on the production hosts only). attach() is additive: the
+// WordPress bridge stays the delivery lane and this copy never blocks it.
+declare global {
+  interface Window {
+    apexAttribution?: {
+      attach: (fields: {
+        name?: string;
+        email?: string;
+        phone?: string;
+        message?: string;
+        isTest?: boolean;
+      }) => unknown;
+    };
+  }
+}
+
+/**
+ * ?apx_test=1 marks a rollout check: the portal copy is stored as a test row
+ * and no GA4 or Ads event fires. It does NOT stop the WordPress bridge, which
+ * delivers to the client's Make workflow, so never submit the live form as a
+ * test; stub the bridge instead.
+ */
+function isRolloutTest(): boolean {
+  try {
+    return new URLSearchParams(window.location.search).get("apx_test") === "1";
+  } catch {
+    return false;
+  }
+}
+
+function copyToApexLedger(
+  fields: { name: string; email: string; phone: string; message: string },
+  test: boolean,
+) {
+  try {
+    window.apexAttribution?.attach(test ? { ...fields, isTest: true } : fields);
+  } catch {
+    /* attribution must never surface on the visitor's submit */
+  }
+}
 
 const QUOTE_ENDPOINT =
   process.env.NEXT_PUBLIC_QUOTE_ENDPOINT ?? "/wp-json/modern-apex/v1/quote";
@@ -97,10 +140,33 @@ export function EstimateForm({ className = "" }: { className?: string }) {
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success) {
+        const confirmedId = requestId.current ?? "";
+        const test = isRolloutTest();
         setStatus("success");
         form.reset();
         requestId.current = null;
-        window.dispatchEvent(new Event("apex:quote-success"));
+        copyToApexLedger(
+          {
+            name,
+            email,
+            phone,
+            message: [
+              service ? `Service: ${service}` : "",
+              `Address: ${location}`,
+              emergency ? "Emergency: yes" : "",
+              message ? `Message: ${message}` : "",
+              `Request ID: ${confirmedId}`,
+            ]
+              .filter(Boolean)
+              .join("\n"),
+          },
+          test,
+        );
+        window.dispatchEvent(
+          new CustomEvent<QuoteSuccessDetail>(QUOTE_SUCCESS_EVENT, {
+            detail: { requestId: confirmedId, test },
+          }),
+        );
         return;
       }
       setStatus("error");
