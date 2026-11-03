@@ -33,7 +33,7 @@ export const site = {
   phoneHref: "tel:+16162325300",
   email: "chris@olemanrb.com",
   emailHref: "mailto:chris@olemanrb.com",
-  blogUrl: "https://olemanrb.com/category/blog/",
+  blogUrl: "/category/blog/",
   address: {
     street: "1002 N Bridge St",
     city: "Belding",

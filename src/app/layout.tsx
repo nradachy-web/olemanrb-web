@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Libre_Franklin, Public_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -10,9 +10,9 @@ import { heroImage, seoTemplates, site } from "@/lib/site";
 import { Analytics } from "@/components/Analytics";
 
 /**
- * Root layout — Ole Man RB's Tree Service.
+ * Root layout, Ole Man RB's Tree Service.
  *
- * Loads the two locked brand faces via next/font/google and exposes them on <html>
+ * Loads the two locked brand faces from local font files and exposes them on <html>
  * as the CSS variables globals.css expects:
  *   - Libre Franklin (700/800/900) -> --font-display-raw  (the bold condensed industrial display)
  *   - Public Sans   (400/500/600/700) -> --font-sans-raw  (clean body)
@@ -27,16 +27,16 @@ import { Analytics } from "@/components/Analytics";
  * wrap those asset paths with asset() to include the GitHub Pages project base.
  */
 
-const display = Libre_Franklin({
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
+const display = localFont({
+  src: "../fonts/libre-franklin-latin.woff2",
+  weight: "700 900",
   variable: "--font-display-raw",
   display: "swap",
 });
 
-const sans = Public_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const sans = localFont({
+  src: "../fonts/public-sans-latin.woff2",
+  weight: "400 700",
   variable: "--font-sans-raw",
   display: "swap",
 });

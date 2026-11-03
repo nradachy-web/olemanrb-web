@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { services, serviceAreas, site } from "@/lib/site";
+import { posts, blogPageCount, blogPagePath } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
@@ -18,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
+    ...posts.map((post) => ({
+      url: `${BASE}/${post.slug}/`,
+      lastModified: post.modified.slice(0, 10),
+      changeFrequency: "yearly" as const,
+      priority: 0.6,
+    })),
+    ...Array.from({ length: blogPageCount }, (_, index) => ({
+      url: `${BASE}${blogPagePath(index + 1)}`,
+      lastModified: "2026-11-03",
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     ...staticPaths.map((p) => ({
       url: `${BASE}${p.path}/`,
       lastModified: LAST_MODIFIED,

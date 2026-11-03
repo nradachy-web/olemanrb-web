@@ -1,0 +1,379 @@
+{
+  "source": "https://olemanrb.com/wp-json/wp/v2/posts",
+  "importedAt": "2026-11-03",
+  "posts": 57,
+  "legalPages": 0,
+  "images": 78,
+  "copiedTextVerified": true,
+  "aliases": {
+    "safeguard-your-home-this-winter-expert-emergency-tree-removal-near-grand-rapids-mi": "expert-emergency-tree-removal-near-grand-rapids-mi",
+    "elementor-810": "how-to-find-licensed-tree-removal-experts-in-greenville-mi"
+  },
+  "media": {
+    "https://olemanrb.com/wp-content/uploads/2023/10/Bronks-web-images-31.png": "/blog/15c898de3d85e8f6dd.webp",
+    "https://olemanrb.com/wp-content/uploads/2023/11/IMG_3582-1024x768.jpg": "/blog/9bed02080c3404a1b1.webp",
+    "https://olemanrb.com/wp-content/uploads/2023/11/Untitled-design-50-e1717690259279.png": "/blog/c07ca7304196667b9d.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/05/Bronks-web-images-34.png": "/blog/291e5281557a8b6138.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/05/Bronks-web-images-37-300x300.png": "/blog/cd4f7c7cfa5d32b4af.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/05/Bronks-web-images-37-768x768.png": "/blog/a1c66c5b8cf6ea409b.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/05/IMG_9452-scaled-e1756215599511-1024x734.jpg": "/blog/14d4fdfc4cbf2fe638.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/Full-Tree-Removal-1024x683.jpg": "/blog/7d8a23593a3eb47a42.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/IMG_6374-scaled-e1717607846877-1024x1024.jpg": "/blog/28828e59d1dea7bd28.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/IMG_6392-1200x700.jpg": "/blog/95ae51aafa1bde2eeb.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/IMG_6425-1200x700.jpg": "/blog/e73907eca088660c61.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/IMG_6425-683x1024.jpg": "/blog/4c6106f055ecf913f1.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/Lot-Clearing-e1754918797533.jpeg": "/blog/af7e8823f30862f3dc.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/Lot-Clearing.jpeg": "/blog/c3f4fd5e38388a0c07.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/Storm-Damage-Removal-1024x683.jpg": "/blog/da9b79563db26eed42.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/06/Tree-Trimming.jpeg": "/blog/2906792eb4aa46a3b7.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/10/Screenshot-2024-10-18-at-11.09.03%E2%80%AFAM-1200x700.png": "/blog/654ec0f3c71cef27e1.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/10/Screenshot-2024-10-18-at-11.09.03%E2%80%AFAM-300x300.png": "/blog/89dfe01c08829c5fd1.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/10/Screenshot-2024-10-18-at-11.09.03 AM-1024x1021.png": "/blog/975d071ec3f169d5c7.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/10/power-pole-4090105_1280-300x200.jpg": "/blog/9c0f2d7036d1b72903.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/10/winter-landscape-2995987_1280-1024x683.jpg": "/blog/af1644a65d48ba4e30.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC07720-1024x576.jpg": "/blog/36d828b9b8dbb30792.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC07814-1024x576.jpg": "/blog/59c0d3f5ca11cb6eed.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC07814-1200x700.jpg": "/blog/fc939dd2b51da64820.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC07861-1024x576.jpg": "/blog/5071ad7220d91c4da9.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC07927-1024x576.jpg": "/blog/b7a0c5afc508c4b70a.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC08004-1024x576.jpg": "/blog/a1b428006d65a12402.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC08136-1024x576.jpg": "/blog/3e7222dee0df2ecea4.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC08477-1024x576.jpg": "/blog/b457331abd72be3b70.webp",
+    "https://olemanrb.com/wp-content/uploads/2024/11/DSC08477-768x432.jpg": "/blog/a864965fb11ec6e6f3.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/02/DSC07628-1024x576.jpg": "/blog/a97b0ab2d0e143ab41.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/02/DSC08163-1024x576.jpg": "/blog/925e700510fa47a696.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/02/DSC08163-768x432.jpg": "/blog/0c8bc93982043ec1e8.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/03/DSC07872-1024x576.jpg": "/blog/02a3ceddb17b79f95d.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/04/DSC07909-1-1024x576.jpg": "/blog/175192babf046851c0.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/04/DSC08122-1024x576.jpg": "/blog/fc64a6c6c72a2e9110.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/04/Screenshot-2025-04-11-at-3.46.35 PM-1024x877.png": "/blog/cfa70567dbdb20be06.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/05/IMG_1215-scaled-e1747851962101-1024x411.jpg": "/blog/ab22ffc118eae4f89f.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/06/Screenshot-2025-06-02-115413-e1748880203782.png": "/blog/c98047b434143dfacd.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/07/IMG_1187-scaled-1-1024x683.jpg": "/blog/a69fd05a250538daf8.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/07/Screenshot-2025-07-01-at-12.26.58 PM-1-1024x344.png": "/blog/c1120f427f26edd353.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/07/Screenshot-2025-07-01-at-12.26.58 PM-1024x344.png": "/blog/03dc3066813d1bc7cb.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-120328-1024x571.png": "/blog/18426fae6e1804136d.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/08/Screenshot-2025-08-19-091727.jpg": "/blog/1234e23186c1e602c5.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/09/Screenshot-2025-09-19-at-5.16.32 PM-906x1024.png": "/blog/9f5e52e8181697b5b1.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/09/Screenshot-2025-09-26-at-3.50.30 PM-1024x531.png": "/blog/39eb17c17ed020e4dd.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/10/Screenshot-2025-10-03-at-3.07.36 PM-1024x649.png": "/blog/498c57dc4a03c715a9.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/10/Screenshot-2025-10-08-at-5.55.32 PM-1024x526.png": "/blog/2094d8d40dda537734.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/10/Screenshot-2025-10-17-at-4.34.55 PM-1024x719.png": "/blog/773f9710c3cfb7d771.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/10/Screenshot-2025-10-24-at-9.27.45 PM-927x1024.png": "/blog/87f89a708a9d13ce3a.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/10/Screenshot-2025-10-31-at-3.28.11 PM-975x1024.png": "/blog/990a47e7b78a1de8de.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/11/Screenshot-2025-11-07-at-3.55.19 PM-1024x768.png": "/blog/e6283b6323946e1c7d.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/11/Screenshot-2025-11-14-at-3.33.43 PM-1024x965.png": "/blog/4d4f2987344a121c74.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/11/Screenshot-2025-11-21-at-3.55.34 PM-1024x558.png": "/blog/e878594a48a69499d2.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/11/Screenshot-2025-11-28-at-2.30.58 PM-833x1024.png": "/blog/8fc7160170b2e020f0.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/12/Screenshot-2025-12-05-at-4.47.07 PM-1024x552.png": "/blog/e4d103f8d278105954.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/12/Screenshot-2025-12-11-at-4.33.51 PM-1024x482.png": "/blog/5c447a7fdb5c28189f.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/12/Screenshot-2025-12-19-at-5.10.26 PM-894x1024.png": "/blog/205c50615e5fc9c81a.webp",
+    "https://olemanrb.com/wp-content/uploads/2025/12/Screenshot-2025-12-28-at-9.27.13 PM-1024x579.png": "/blog/14d2940e2637f765d1.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/01/Screenshot-2026-01-03-at-8.39.46 PM-689x1024.png": "/blog/f9469eaf3412b00424.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/01/Screenshot-2026-01-10-at-8.23.17 PM-1024x629.png": "/blog/eeefca007ed365b319.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/01/Screenshot-2026-01-17-at-8.44.00 PM-1024x738.png": "/blog/5441fe2f5c30b30b44.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/01/Screenshot-2026-01-25-at-5.19.27 PM-511x1024.png": "/blog/c55b3b6f2f08ba7730.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/01/Screenshot-2026-01-30-at-6.32.42 PM.png": "/blog/e7ad015ce97bbc31b0.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/02/Screenshot-2026-02-08-at-2.01.11 PM-948x1024.png": "/blog/695f9826f8fc3ddac1.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/02/Screenshot-2026-02-16-at-4.27.05 PM.png": "/blog/4e3250b5d58b7c0829.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/02/Screenshot-2026-02-23-at-9.31.19 PM-1024x629.png": "/blog/25f59b7dc8358d99ff.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/03/Screenshot-2026-03-02-at-1.10.21 PM-1024x885.png": "/blog/72c98a96f886f26386.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/03/Screenshot-2026-03-06-at-4.08.11 PM-1024x512.png": "/blog/3272256d02d3c8142c.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/03/Screenshot-2026-03-15-at-8.13.27 PM-1024x862.png": "/blog/896cd2bbf8edfc3683.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/03/Screenshot-2026-03-23-at-4.37.05 PM-1024x526.png": "/blog/f4ff9398dd9acc87d6.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-9.10.42 PM.png": "/blog/f1d5d8ea3e6602e6a2.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/04/Screenshot-2026-04-07-at-10.31.12 PM.png": "/blog/54ffc05b4f17b05221.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/04/Screenshot-2026-04-12-at-6.10.50 PM-730x1024.png": "/blog/6ff54e949484f99f8f.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.39.49 PM-1024x681.png": "/blog/b157f87c0e1ddb6bde.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/04/Screenshot-2026-04-28-at-8.00.16 PM.png": "/blog/638e3ac149f3135922.webp",
+    "https://olemanrb.com/wp-content/uploads/2026/05/Screenshot-2026-05-04-at-9.24.43 PM.png": "/blog/42554c67eb950f8c0c.webp",
+    "https://olemanrb.com/wp-content/uploads/elementor/thumbs/DSC07628-scaled-r1uqwxpfpve5f01ukco8hv1kgjtxk19ogkqnqml02a.jpg": "/blog/5b6b4acc7d6a75e0cd.webp"
+  },
+  "routes": [
+    {
+      "id": 1520,
+      "path": "/emergency-tree-removal-in-western-michigan/",
+      "sourceUrl": "https://olemanrb.com/emergency-tree-removal-in-western-michigan/"
+    },
+    {
+      "id": 1514,
+      "path": "/eco-friendly-tree-removal-what-responsible-companies-are-doing-in-2026/",
+      "sourceUrl": "https://olemanrb.com/eco-friendly-tree-removal-what-responsible-companies-are-doing-in-2026/"
+    },
+    {
+      "id": 1510,
+      "path": "/why-april-is-a-smart-time-for-tree-removal-before-full-spring-growth/",
+      "sourceUrl": "https://olemanrb.com/why-april-is-a-smart-time-for-tree-removal-before-full-spring-growth/"
+    },
+    {
+      "id": 1418,
+      "path": "/how-to-handle-a-neighbors-dangerous-tree-a-complete-guide-for-homeowners/",
+      "sourceUrl": "https://olemanrb.com/how-to-handle-a-neighbors-dangerous-tree-a-complete-guide-for-homeowners/"
+    },
+    {
+      "id": 1415,
+      "path": "/that-tree-is-closer-to-your-house-than-you-think/",
+      "sourceUrl": "https://olemanrb.com/that-tree-is-closer-to-your-house-than-you-think/"
+    },
+    {
+      "id": 1410,
+      "path": "/lot-clearing-for-new-construction-what-homeowners-should-know/",
+      "sourceUrl": "https://olemanrb.com/lot-clearing-for-new-construction-what-homeowners-should-know/"
+    },
+    {
+      "id": 1406,
+      "path": "/march-tree-care-guide-what-michigan-homeowners-should-do-now/",
+      "sourceUrl": "https://olemanrb.com/march-tree-care-guide-what-michigan-homeowners-should-do-now/"
+    },
+    {
+      "id": 1402,
+      "path": "/why-is-my-tree-leaning-should-you-remove-it/",
+      "sourceUrl": "https://olemanrb.com/why-is-my-tree-leaning-should-you-remove-it/"
+    },
+    {
+      "id": 1397,
+      "path": "/how-long-does-tree-removal-take-a-homeowners-guide/",
+      "sourceUrl": "https://olemanrb.com/how-long-does-tree-removal-take-a-homeowners-guide/"
+    },
+    {
+      "id": 1390,
+      "path": "/march-tree-inspections-what-homeowners-should-look-for/",
+      "sourceUrl": "https://olemanrb.com/march-tree-inspections-what-homeowners-should-look-for/"
+    },
+    {
+      "id": 1385,
+      "path": "/when-should-you-remove-a-dead-oak-tree/",
+      "sourceUrl": "https://olemanrb.com/when-should-you-remove-a-dead-oak-tree/"
+    },
+    {
+      "id": 1379,
+      "path": "/tree-removal-near-power-lines-what-you-should-know/",
+      "sourceUrl": "https://olemanrb.com/tree-removal-near-power-lines-what-you-should-know/"
+    },
+    {
+      "id": 1375,
+      "path": "/common-tree-species-in-michigan-that-often-need-removal/",
+      "sourceUrl": "https://olemanrb.com/common-tree-species-in-michigan-that-often-need-removal/"
+    },
+    {
+      "id": 1370,
+      "path": "/snow-ice-and-frozen-ground-the-perfect-storm-for-tree-failure-in-michigan/",
+      "sourceUrl": "https://olemanrb.com/snow-ice-and-frozen-ground-the-perfect-storm-for-tree-failure-in-michigan/"
+    },
+    {
+      "id": 1367,
+      "path": "/michigan-winter-tree-damage-exploding-trees-and-emergency-removal/",
+      "sourceUrl": "https://olemanrb.com/michigan-winter-tree-damage-exploding-trees-and-emergency-removal/"
+    },
+    {
+      "id": 1363,
+      "path": "/what-makes-professional-arborists-different/",
+      "sourceUrl": "https://olemanrb.com/what-makes-professional-arborists-different/"
+    },
+    {
+      "id": 1359,
+      "path": "/how-tree-removal-crews-protect-your-home-landscaping/",
+      "sourceUrl": "https://olemanrb.com/how-tree-removal-crews-protect-your-home-landscaping/"
+    },
+    {
+      "id": 1352,
+      "path": "/tree-removal-services-in-greenville-and-rockford-what-sets-us-apart/",
+      "sourceUrl": "https://olemanrb.com/tree-removal-services-in-greenville-and-rockford-what-sets-us-apart/"
+    },
+    {
+      "id": 1349,
+      "path": "/how-long-does-tree-removal-take-a-complete-homeowners-guide/",
+      "sourceUrl": "https://olemanrb.com/how-long-does-tree-removal-take-a-complete-homeowners-guide/"
+    },
+    {
+      "id": 1344,
+      "path": "/top-reasons-homeowners-in-michigan-remove-trees/",
+      "sourceUrl": "https://olemanrb.com/top-reasons-homeowners-in-michigan-remove-trees/"
+    },
+    {
+      "id": 1339,
+      "path": "/the-specialized-equipment-used-for-winter-tree-removal-and-why-diy-is-dangerous/",
+      "sourceUrl": "https://olemanrb.com/the-specialized-equipment-used-for-winter-tree-removal-and-why-diy-is-dangerous/"
+    },
+    {
+      "id": 1335,
+      "path": "/emergency-tree-removal-after-heavy-snow-or-ice-a-michigan-homeowners-guide/",
+      "sourceUrl": "https://olemanrb.com/emergency-tree-removal-after-heavy-snow-or-ice-a-michigan-homeowners-guide/"
+    },
+    {
+      "id": 1330,
+      "path": "/the-hidden-dangers-of-rotten-or-hollow-trees-and-why-removal-is-your-safest-option/",
+      "sourceUrl": "https://olemanrb.com/the-hidden-dangers-of-rotten-or-hollow-trees-and-why-removal-is-your-safest-option/"
+    },
+    {
+      "id": 1311,
+      "path": "/how-crane-assisted-tree-removal-works-and-why-its-the-safest-option-for-tough-jobs/",
+      "sourceUrl": "https://olemanrb.com/how-crane-assisted-tree-removal-works-and-why-its-the-safest-option-for-tough-jobs/"
+    },
+    {
+      "id": 1307,
+      "path": "/emergency-tree-removal-what-to-do-after-a-winter-storm-in-michigan/",
+      "sourceUrl": "https://olemanrb.com/emergency-tree-removal-what-to-do-after-a-winter-storm-in-michigan/"
+    },
+    {
+      "id": 1303,
+      "path": "/how-professional-equipment-makes-tree-removal-safer-and-more-efficient/",
+      "sourceUrl": "https://olemanrb.com/how-professional-equipment-makes-tree-removal-safer-and-more-efficient/"
+    },
+    {
+      "id": 1300,
+      "path": "/5-signs-your-tree-needs-removal-before-it-becomes-dangerous/",
+      "sourceUrl": "https://olemanrb.com/5-signs-your-tree-needs-removal-before-it-becomes-dangerous/"
+    },
+    {
+      "id": 1295,
+      "path": "/how-stump-grinding-can-prevent-pests-and-lawn-damage-long-term/",
+      "sourceUrl": "https://olemanrb.com/how-stump-grinding-can-prevent-pests-and-lawn-damage-long-term/"
+    },
+    {
+      "id": 1292,
+      "path": "/why-tree-trimming-is-best-left-to-insured-and-licensed-professionals/",
+      "sourceUrl": "https://olemanrb.com/why-tree-trimming-is-best-left-to-insured-and-licensed-professionals/"
+    },
+    {
+      "id": 1284,
+      "path": "/understanding-stump-grinding-vs-stump-removal-which-is-right-for-you/",
+      "sourceUrl": "https://olemanrb.com/understanding-stump-grinding-vs-stump-removal-which-is-right-for-you/"
+    },
+    {
+      "id": 1280,
+      "path": "/5-factors-that-influence-the-cost-of-tree-removal/",
+      "sourceUrl": "https://olemanrb.com/5-factors-that-influence-the-cost-of-tree-removal/"
+    },
+    {
+      "id": 1276,
+      "path": "/backyard-safety-why-tree-inspections-matter-for-kids-pets-and-outdoor-living/",
+      "sourceUrl": "https://olemanrb.com/backyard-safety-why-tree-inspections-matter-for-kids-pets-and-outdoor-living/"
+    },
+    {
+      "id": 1270,
+      "path": "/top-5-signs-a-tree-may-fall-during-the-next-michigan-storm/",
+      "sourceUrl": "https://olemanrb.com/top-5-signs-a-tree-may-fall-during-the-next-michigan-storm/"
+    },
+    {
+      "id": 1264,
+      "path": "/september-tree-care-in-michigan-tree-pruning-trimming-removal-checklist/",
+      "sourceUrl": "https://olemanrb.com/september-tree-care-in-michigan-tree-pruning-trimming-removal-checklist/"
+    },
+    {
+      "id": 1262,
+      "path": "/what-to-expect-during-a-professional-tree-removal-in-michigan/",
+      "sourceUrl": "https://olemanrb.com/what-to-expect-during-a-professional-tree-removal-in-michigan/"
+    },
+    {
+      "id": 1259,
+      "path": "/how-to-prevent-tree-damage-during-michigans-fall-storm-season/",
+      "sourceUrl": "https://olemanrb.com/how-to-prevent-tree-damage-during-michigans-fall-storm-season/"
+    },
+    {
+      "id": 1255,
+      "path": "/how-to-spot-tree-fungal-infections-before-they-spread/",
+      "sourceUrl": "https://olemanrb.com/how-to-spot-tree-fungal-infections-before-they-spread/"
+    },
+    {
+      "id": 1253,
+      "path": "/root-intrusion-101-protecting-your-driveway-pipes-foundation/",
+      "sourceUrl": "https://olemanrb.com/root-intrusion-101-protecting-your-driveway-pipes-foundation/"
+    },
+    {
+      "id": 1250,
+      "path": "/how-regular-tree-inspections-can-prevent-expensive-emergencies/",
+      "sourceUrl": "https://olemanrb.com/how-regular-tree-inspections-can-prevent-expensive-emergencies/"
+    },
+    {
+      "id": 1246,
+      "path": "/the-hidden-dangers-of-leaning-trees-when-to-act-before-its-too-late/",
+      "sourceUrl": "https://olemanrb.com/the-hidden-dangers-of-leaning-trees-when-to-act-before-its-too-late/"
+    },
+    {
+      "id": 1239,
+      "path": "/top-5-signs-your-trees-are-sick-and-could-be-dying/",
+      "sourceUrl": "https://olemanrb.com/top-5-signs-your-trees-are-sick-and-could-be-dying/"
+    },
+    {
+      "id": 1233,
+      "path": "/how-overhanging-branches-can-damage-your-roof-cost-you-thousands/",
+      "sourceUrl": "https://olemanrb.com/how-overhanging-branches-can-damage-your-roof-cost-you-thousands/"
+    },
+    {
+      "id": 1229,
+      "path": "/why-tree-roots-can-damage-your-foundation-and-what-to-do-about-it/",
+      "sourceUrl": "https://olemanrb.com/why-tree-roots-can-damage-your-foundation-and-what-to-do-about-it/"
+    },
+    {
+      "id": 1219,
+      "path": "/why-you-should-remove-dead-trees-during-michigans-warm-seasons/",
+      "sourceUrl": "https://olemanrb.com/why-you-should-remove-dead-trees-during-michigans-warm-seasons/"
+    },
+    {
+      "id": 1180,
+      "path": "/why-stump-removal-matters-more-than-you-think/",
+      "sourceUrl": "https://olemanrb.com/why-stump-removal-matters-more-than-you-think/"
+    },
+    {
+      "id": 1147,
+      "path": "/how-to-spot-hazardous-trees-before-they-cause-damage/",
+      "sourceUrl": "https://olemanrb.com/how-to-spot-hazardous-trees-before-they-cause-damage/"
+    },
+    {
+      "id": 1160,
+      "path": "/diy-tree-removal-is-riskier-than-you-think-why-hiring-professionals-makes-sense-for-michigan-homeowners/",
+      "sourceUrl": "https://olemanrb.com/diy-tree-removal-is-riskier-than-you-think-why-hiring-professionals-makes-sense-for-michigan-homeowners/"
+    },
+    {
+      "id": 1126,
+      "path": "/5-signs-its-time-to-remove-a-tree-before-it-becomes-a-hazard/",
+      "sourceUrl": "https://olemanrb.com/5-signs-its-time-to-remove-a-tree-before-it-becomes-a-hazard/"
+    },
+    {
+      "id": 1113,
+      "path": "/emergency-tree-removal-in-michigan-what-homeowners-need-to-know/",
+      "sourceUrl": "https://olemanrb.com/emergency-tree-removal-in-michigan-what-homeowners-need-to-know/"
+    },
+    {
+      "id": 952,
+      "path": "/when-to-remove-a-tree-key-considerations-for-homeowners/",
+      "sourceUrl": "https://olemanrb.com/when-to-remove-a-tree-key-considerations-for-homeowners/"
+    },
+    {
+      "id": 949,
+      "path": "/the-importance-of-professional-tree-removal-for-safety-and-aesthetics-in-michigan/",
+      "sourceUrl": "https://olemanrb.com/the-importance-of-professional-tree-removal-for-safety-and-aesthetics-in-michigan/"
+    },
+    {
+      "id": 947,
+      "path": "/from-winter-to-summer-ole-man-rbs-comprehensive-year-round-tree-services/",
+      "sourceUrl": "https://olemanrb.com/from-winter-to-summer-ole-man-rbs-comprehensive-year-round-tree-services/"
+    },
+    {
+      "id": 941,
+      "path": "/how-to-find-licensed-tree-removal-experts-in-greenville-mi/",
+      "sourceUrl": "https://olemanrb.com/how-to-find-licensed-tree-removal-experts-in-greenville-mi/"
+    },
+    {
+      "id": 938,
+      "path": "/expert-emergency-tree-removal-near-grand-rapids-mi/",
+      "sourceUrl": "https://olemanrb.com/expert-emergency-tree-removal-near-grand-rapids-mi/"
+    },
+    {
+      "id": 934,
+      "path": "/top-reasons-to-trim-your-trees-before-winter-in-rockford-mi/",
+      "sourceUrl": "https://olemanrb.com/top-reasons-to-trim-your-trees-before-winter-in-rockford-mi/"
+    },
+    {
+      "id": 932,
+      "path": "/understanding-tree-removal-costs-in-belmont-mi/",
+      "sourceUrl": "https://olemanrb.com/understanding-tree-removal-costs-in-belmont-mi/"
+    },
+    {
+      "id": 757,
+      "path": "/the-risks-of-unmaintained-trees-going-into-a-michigan-winter/",
+      "sourceUrl": "https://olemanrb.com/the-risks-of-unmaintained-trees-going-into-a-michigan-winter/"
+    }
+  ]
+}
