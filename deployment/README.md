@@ -1,5 +1,11 @@
 # Hostinger deployment
 
+**November 3, 2026:** The blog now uses the static overlay described in
+`BLOG-MIGRATION.md`. Preserve its STATIC BLOG routing block and comment endpoint
+blocks. The actual underlying homepage release is `_apex-geoapify-20260922`.
+WordPress remains for the existing quote workflow and other retained pages.
+The September notes below describe earlier releases and are historical.
+
 The production site is https://olemanrb.com/. WordPress remains installed for its articles, legal pages, Elementor submissions, and existing Make automation.
 
 The static export is served from `public_html/_apex-repair-20260918/` through the rules in `hostinger.htaccess`. Unmatched paths continue to the existing WordPress rules. Do not replace or delete the WordPress installation.

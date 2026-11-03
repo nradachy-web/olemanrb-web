@@ -1,5 +1,12 @@
 # Static blog migration, November 3, 2026
 
+Production cutover is complete. All 57 articles, six archive pages and two
+legacy aliases are live on olemanrb.com. All 148 public file checks passed,
+and all ten comment/trackback/pingback endpoint checks returned HTTP 410.
+The existing home/contact/quote-namespace checksums are unchanged. The original
+homepage release is `_apex-geoapify-20260922`; the blog release is layered above
+it. The deployment ZIP is stored outside `public_html`. No SSH was enabled.
+
 Nick requested replacing WordPress blog pages with static pages in the existing
 GitHub site, preserving the copy and URLs and removing the comment sections.
 This is a blog-only swap. It does not retire the WordPress installation, replace
