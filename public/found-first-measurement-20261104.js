@@ -193,5 +193,16 @@
   }
   if (optedOut()) clearMeasurement();
   pageView();
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
+  // Wait for React to finish hydrating before touching the page. Editing the DOM
+  // first causes React error #418, a full client re-render and duplicate JSON-LD.
+  function hydrated() {
+    var el = document.querySelector('footer') || document.body;
+    return !!el && Object.keys(el).some(function (k) { return k.indexOf('__reactFiber') === 0; });
+  }
+  function start() {
+    if (!window.__next_f) return ready();
+    var tries = 0;
+    (function check() { if (hydrated() || ++tries > 100) return ready(); setTimeout(check, 100); })();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
