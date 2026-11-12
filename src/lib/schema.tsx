@@ -16,9 +16,8 @@ import {
  *
  * CONFIRM-BEFORE-LAUNCH values (do NOT invent live data):
  *   - site.geo          Belding, MI city-center approximation, not the verified GBP pin
- *   - site.facebook     empty until the real profile URL is confirmed (sameAs filters empties)
- *   - googleRating      score "5.0" / count 6 = the six verified named reviews in hand
- * Each is flagged with a // TODO below. None are fabricated.
+ * Public company profile links and Google rating totals were checked November 12, 2026.
+ * The selected testimonials are a subset of the Google review total.
  */
 
 /** Phone in E.164-ish schema form, derived from the canonical tel: href (no fabrication). */
@@ -84,14 +83,13 @@ export function localBusinessSchema() {
     founder: { "@type": "Person", name: site.owner.name },
     aggregateRating: {
       "@type": "AggregateRating",
-      // TODO: update to the live Google total once confirmed (currently the 6 verified reviews)
+      // Observed Google total; not the number of selected testimonials.
       ratingValue: googleRating.score,
       reviewCount: googleRating.count,
       bestRating: "5",
     },
     review: reviewNodes(),
-    // TODO: populate with the real Google Business Profile / social URLs when confirmed.
-    sameAs: [site.facebook].filter(Boolean),
+    sameAs: [site.facebook, site.linkedin].filter(Boolean),
     knowsAbout: services.map((s) => s.name),
     makesOffer: services.map((s) => ({
       "@type": "Offer",
@@ -163,7 +161,7 @@ export function reviewSchema() {
     "@context": "https://schema.org",
     "@type": "AggregateRating",
     itemReviewed: { "@id": `${site.url}/#business` },
-    // TODO: update to the live Google total once confirmed.
+    // Same dated Google total used by the LocalBusiness node.
     ratingValue: googleRating.score,
     reviewCount: googleRating.count,
     bestRating: "5",
