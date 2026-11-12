@@ -47,8 +47,9 @@ export const site = {
     name: "Chris Holmes",
     title: "Owner and Operator",
   },
-  /** Placeholder. schema.tsx sameAs filters empties; populate when the real URL is confirmed. */
-  facebook: "",
+  /** Public company profiles verified November 12, 2026. */
+  facebook: "https://www.facebook.com/Olemanrb",
+  linkedin: "https://www.linkedin.com/company/ole-man-rb-s-tree-service-llc",
   /** Belding, MI approximate for GeoCoordinates in JSON-LD; refine with the verified GBP pin. */
   geo: { lat: 43.0978, lng: -85.2289 },
   motto:
@@ -892,9 +893,9 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-/** Google rating. count is the verbatim-review total we can prove right now.
- * Update score/count to the live Google Business Profile totals once confirmed. */
-export const googleRating = { score: "5.0", count: 6 };
+/** Google Business Profile total observed November 12, 2026.
+ * The six selected testimonials are a separate subset of these reviews. */
+export const googleRating = { score: "5.0", count: 198 };
 
 /* -------------------------------------------------------------------------- */
 /* STATS (count-up strip, all defensible)                                     */
